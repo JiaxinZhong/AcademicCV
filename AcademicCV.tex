@@ -1,0 +1,441 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.6.5, 3 Nov 2022) written by LianTze Lim (liantze@gmail.com). Compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+%% AltaCV uses the fontawesome5 and packages.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% provides the environment outline
+% \usepackage{outlines}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{DarkPastelRed}
+\colorlet{headingrule}{GoldenEarth}
+\colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+% \input{pubs-authoryear}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+\input{pubs-num}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\newcommand{\PubJournal}[1]{\textit{#1}}
+\newcommand{\PubConference}[1]{\textit{#1}}
+\newcommand{\PubPress}[1]{\textit{#1}}
+\usepackage{mfirstuc}
+\newcommand{\PubTitle}[1]{``{#1,}''}
+\newcommand{\PubCorAuthor}[1]{#1*}
+
+
+\begin{document}
+\name{{Jiaxin (Jay) Zhong}}
+\tagline{Post-Doc in Acoustics at Penn State University}
+%% You can add multiple photos on the left or right
+\photoR{2.8cm}{Globe_High}
+% \photoL{2.5cm}{Yacht_High,Suitcase_High}
+
+\personalinfo{%
+  % Not all of these are required!
+  \email{Jiaxin.Zhong@psu.edu}
+  \phone{(+1)515-214-9386}
+  \mailaddress{201 Applied Sciences Building}
+  \location{Graduate Program in Acoustics, The Pennsylvania State University, University Park, PA 16802}
+  \homepage{JiaxinZhong.com}
+  %\twitter{@twitterhandle}
+  \linkedin{jiaxin-jay-zhong-502051240}
+  \github{JiaxinZhong}
+  \orcid{0000-0002-9972-8004}
+  %% You can add your own arbitrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+  %%
+  %% For services and platforms like Mastodon where there isn't a
+  %% straightforward relation between the user ID/nickname and the hyperlink,
+  %% you can use \printinfo directly e.g.
+  % \printinfo{\faMastodon}{@username@instace}[https://instance.url/@username]
+  %% But if you absolutely want to create new dedicated info fields for
+  %% such platforms, then use \NewInfoField* with a star:
+  % \NewInfoField*{mastodon}{\faMastodon}
+  %% then you can use \mastodon, with TWO arguments where the 2nd argument is
+  %% the full hyperlink.
+  % \mastodon{@username@instance}{https://instance.url/@username}
+}
+
+\makecvheader
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+\cvsection{Employment}
+
+\cvevent{Post-Doc}{Penn State University}{Dec 2022 -- Ongoing}{University Park}
+\begin{itemize}
+\item Job description 1
+\item Job description 2
+\end{itemize}
+
+\cvsection{Projects}
+
+\cvevent{Project 1}{Funding agency/institution}{}{}
+\begin{itemize}
+\item Details
+\end{itemize}
+
+\divider
+
+\cvevent{Project 2}{Funding agency/institution}{Project duration}{}
+A short abstract would also work.
+
+\medskip
+
+\cvsection{A Day of My Life}
+
+% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% \wheelchart{outer radius}{inner radius}{
+% comma-separated list of value/text width/color/detail}
+\wheelchart{1.5cm}{0.5cm}{%
+  6/8em/accent!30/{Sleep,\\beautiful sleep},
+  3/8em/accent!40/Hopeful novelist by night,
+  8/8em/accent!60/Daytime job,
+  2/10em/accent/Sports and relaxation,
+  5/6em/accent!20/Spending time with family
+}
+
+\medskip
+\cvsection{Education}
+
+\cvevent{Ph.D.\ in Acoustics}{University of Technology Sydney}{Mar 2019 -- Aug 2022}{}
+Advisors: Prof. Ray Kirby, Dr. Mahmoud Karimi, Prof. Xiaojun Qiu
+
+Thesis title: Parametric array loudspeakers and applications in active noise control
+
+\divider
+
+\cvevent{M.Sc.\ in Acoustics}{Nanjing University}{Sept 2015 -- June 2018}{}
+Advisors: A/Prof. Jiancheng Tao, Prof. Xiaojun Qiu
+
+Thesis: Effects of a finite size reflecting disk on sound power measurements
+
+\divider
+
+\cvevent{B.Sc.\ in Acoustics}{Nanjing University}{Sept 2011 -- June 2015}{}
+Advisor: Prof. Xinlong Wang
+
+Thesis: The study of matching layers for ultrasonic transducers
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{My Life Philosophy}
+
+\begin{quote}
+``Something smart or heartfelt, preferably in one sentence.''
+\end{quote}
+
+\cvsection{Most Proud of}
+
+\cvachievement{\faTrophy}{Fantastic Achievement}{and some details about it}
+
+\divider
+
+\cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
+
+\divider
+
+\cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
+
+\cvsection{Strengths}
+
+\cvtag{Hard-working}
+\cvtag{Eye for detail}\\
+\cvtag{Motivator \& Leader}
+
+\divider\smallskip
+
+\cvtag{C++}
+\cvtag{Embedded Systems}\\
+\cvtag{Statistical Analysis}
+
+\cvsection{Languages}
+
+\cvskill{English}{5}
+\divider
+
+\cvskill{Spanish}{4}
+\divider
+
+\cvskill{German}{3.5} %% Supports X.5 values.
+
+%% Yeah I didn't spend too much time making all the
+%% spacing consistent... sorry. Use \smallskip, \medskip,
+%% \bigskip, \vspace etc to make adjustments.
+\medskip
+
+
+% \divider
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{Referees}
+
+% \cvref{name}{email}{mailing address}
+\cvref{Dr.\ Yun Jing}{Penn State University}{Jing.Yun@psu.edu}
+{Address Line 1\\Address line 2}
+
+\divider
+
+\cvref{Prof.\ Ray Kirby}{University of Technology Sydney}{Ray.Kirby@uts.edu.au}
+{Address Line 1\\Address line 2}
+
+\divider
+
+\cvref{Dr.\ Mahmoud Karimi}{University of Technology Sydney}{Mahmoud.Karimi@uts.edu.au}
+{Address Line 1\\Address line 2}
+
+\divider
+
+\cvref{Prof.\ Xiaojun Qiu}{Nanjing University}{xjqiu@nju.edu.cn}
+{Address Line 1\\Address line 2}
+
+\divider
+
+\cvref{Prof.\ Jing Lu}{Nanjing University}{lujing@nju.edu.cn}
+{Address Line 1\\Address line 2}
+
+\end{paracol}
+
+\begin{paracol}{1}
+% use ONLY \newpage if you want to force a page break for
+% ONLY the current column
+% \newpage
+
+\cvsection{Publications}
+
+%% Specify your last name(s) and first name(s) as given in the .bib to automatically bold your own name in the publications list. 
+%% One caveat: You need to write \bibnamedelima where there's a space in your name for this to work properly; or write \bibnamedelimi if you use initials in the .bib
+%% You can specify multiple names, especially if you have changed your name or if you need to highlight multiple authors. 
+\mynames{Lim/Lian\bibnamedelima Tze,
+  Wong/Lian\bibnamedelima Tze,
+  Lim/Tracy,
+  Lim/L.\bibnamedelimi T.}
+%% MAKE SURE THERE IS NO SPACE AFTER THE FINAL NAME IN YOUR \mynames LIST
+
+\nocite{*}
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+
+\textit{``*'': corresponding author.
+Underline: students under the supervision of Dr. Jiaxin Zhong.}
+
+\vspace{.5cm}
+
+\cvsubsection{\printinfo{\faBook}{Books}}
+
+\begin{itemize}[leftmargin = 25pt]
+    \justifying 
+    \item[{[B1]}] \textbf{Jiaxin Zhong} and Xiaojun Qiu, 
+    ``Acoustic Waves Generated by Parametric Array Loudspeakers,'' 
+    \textit{CRC Press}, In preparation (2023).
+\end{itemize}
+
+\divider
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}},type=article]
+\cvsubsection{\printinfo{\faFile}{Journal Articles}}
+
+\begin{itemize}[leftmargin = 25pt]
+    % \setlength\itemsep{-.5em}
+    \justifying 
+    \item[{[J19]}]
+        \textbf{Jiaxin Zhong}, Haishan Zou, Jing Lu, and \PubCorAuthor{Dong Zhang},
+        \PubTitle{A modified convolution model for calculating the far field directivity of a parametric array loudspeaker}
+        \PubJournal{J. Acoust. Soc. Am.}
+        Under review (2022).
+
+    \item[{[J18]}]
+        \textbf{Jiaxin Zhong}, \underline{Tao Zhuang}, Ray Kirby, Mahmoud Karimi, Jing Lu, and \PubCorAuthor{Dong Zhang},
+        \PubTitle{Suppressing grating lobes for a steerable parametric array loudspeaker}
+        \PubJournal{IEEE Trans. Audio Speech Lang. Process.}
+        Under review (2022).
+
+    \item[{[J17]}]
+        \underline{Tao Zhuang}, 
+        \PubCorAuthor{\textbf{Jiaxin Zhong}},
+        Ray Kirby, Mahmoud Karimi, and Jing Lu, 
+        \PubTitle{A steerable non-paraxial Gaussian beam expansion for a steerable parametric array loudspeaker}
+        \PubJournal{J. Acoust. Soc. Am.}
+        153(1), 124--136 (2023).
+
+    \item[{[J16]}]
+        \textbf{Jiaxin Zhong}, \underline{Tao Zhuang}, Ray Kirby, Mahmoud Karimi, Xiaojun Qiu, \PubCorAuthor{Haishan Zou}, and Jing Lu,
+        \PubTitle{Low frequency audio sound field generated by a focusing parametric array loudspeaker}
+        \PubJournal{IEEE Trans. Audio Speech Lang. Process.}
+        30, 3098--3109 (2022).
+
+    \item[{[J15]}]
+        \textbf{Jiaxin Zhong}, Ray Kirby, Mahmoud Karimi, and \PubCorAuthor{Haishan Zou},
+        \PubTitle{A spherical wave expansion for a steerable parametric array loudspeaker using Zernike polynomials} 
+        \PubJournal{J. Acoust. Soc. Am.} 
+        152(4), 2296--2308 (2022).
+
+    \item[{[J14]}]
+        \textbf{Jiaxin Zhong}, Ray Kirby, Mahmoud Karimi, \PubCorAuthor{Haishan Zou}, and Xiaojun Qiu,
+        \PubTitle{Scattering by a rigid sphere of audio sound generated by a parametric array loudspeaker} 
+        \PubJournal{J. Acoust. Soc. Am.} 
+        151(3), 1615--1626 (2022).
+
+    \item[{[J13]}]
+        \textbf{Jiaxin Zhong}, \underline{Tao Zhuang}, Ray Kirby, Mahmoud Karimi, \PubCorAuthor{Haishan Zou}, and Xiaojun
+Qiu. 
+        \PubTitle{Quiet zone generation in a free field with multiple parametric array loudspeakers} 
+        \PubJournal{J. Acoust. Soc. Am.} 151(2), 1235--1245 (2022).
+
+    \item[{[J12]}]
+        \textbf{Jiaxin Zhong}, Ray Kirby, Mahmoud Karimi, and \PubCorAuthor{Haishan Zou}, 
+        \PubTitle{A cylindrical expansion of the audio sound for a steerable parametric array loudspeaker}
+        \PubJournal{J. Acoust. Soc. Am.}
+        150(5), 3797--3806 (2021).
+
+    \item[{[J11]}]
+        \PubCorAuthor{\textbf{Jiaxin Zhong}}, Ray Kirby, and Xiaojun Qiu,         
+        \PubTitle{The near field, Westervelt far field, and inverse-law far field of the audio sound generated by parametric array loudspeakers}
+        \PubJournal{J. Acoust. Soc. Am.}
+        149(3), 1524--1535 (2021).
+
+    \item[{[J10]}]
+        \PubCorAuthor{\textbf{Jiaxin Zhong}} and Xiaojun Qiu,
+        \PubTitle{On the spherical expansion for calculating the sound radiated by a baffled circular piston} 
+        \PubJournal{J. Theor. Comput. Acoust.}
+        2050026 (2020).
+
+    \item[{[J9]}]
+        \PubCorAuthor{\textbf{Jiaxin Zhong}}, Shuping Wang, Ray Kirby, and Xiaojun Qiu, 
+        \PubTitle{Reflection of audio sounds generated by a parametric array loudspeaker} 
+        \PubJournal{J. Acoust. Soc. Am.}
+        148(4), 2327--2336 (2020).
+
+    \item[{[J8]}]
+        \PubCorAuthor{\textbf{Jiaxin Zhong}}, Shuping Wang, Ray Kirby, and Xiaojun Qiu, 
+        \PubTitle{Insertion loss of a thin partition for audio sounds generated by a parametric array loudspeaker}
+        \PubJournal{J. Acoust. Soc. Am.}
+        148(1), 226--235 (2020).
+
+    \item[{[J7]}]
+        \PubCorAuthor{\textbf{Jiaxin Zhong}}, Ray Kirby, and Xiaojun Qiu, 
+        \PubTitle{A spherical expansion for audio sounds generated by a circular parametric array loudspeaker}
+        \PubJournal{J. Acoust. Soc. Am.}
+        147(5), 3502--3510 (2020).
+
+    \item[{[J6]}] \textbf{Jiaxin Zhong}, Baicun Chen, \PubCorAuthor{Jianchen Tao}, and Xiaojun Qiu,
+        \PubTitle{The performance of active noise control systems on ground with two parallel reflecting surfaces}
+        \PubJournal{J. Acoust. Soc. Am.}
+        147(5), 3397--3407 (2020).
+
+    \item[{[J5]}] \PubCorAuthor{Shuping Wang}, \textbf{Jiaxin Zhong}, Xiaojun Qiu, and Ian Burnett, 
+        \PubTitle{A note on using panel diffusers to improve sound field diffusivity in reverberation rooms below 100 Hz}
+    \PubJournal{Appl. Acoust.} 
+    169, 107471 (2020).
+
+    \item[{[J4]}] \PubCorAuthor{\textbf{Jiaxin Zhong}}, Ray Kirby, and Xiaojun Qiu,
+        \PubTitle{A non-paraxial model for the audio sound behind a non-baffled parametric array loudspeaker (L)}
+        \PubJournal{J. Acoust. Soc. Am.}
+        147(3), 1577-1580 (2020).
+
+    \item[{[J3]}] \textbf{Jiaxin Zhong}, \PubCorAuthor{Jiancheng Tao}, and Xiaojun Qiu, 
+        \PubTitle{Increasing the performance of active noise control systems on ground with two vertical reflecting surfaces with an included angle} 
+        \PubJournal{J. Acoust. Soc. Am.}
+        146(6), 4075--4085 (2019).
+
+    \item[{[J2]}] \textbf{Jiaxin Zhong}, \PubCorAuthor{Jiancheng Tao}, and Xiaojun Qiu,
+        \PubTitle{Increasing the performance of active noise control systems on ground with a finite size vertical reflecting surface}
+        \PubJournal{Appl. Acoust.} 
+        154, 193--200 (2019).
+
+    \item[{[J1]}] \textbf{Jiaxin Zhong}, \PubCorAuthor{Jiancheng Tao}, Feng Niu, and Xiaojun Qiu,
+        \PubTitle{Effects of a finite size reflecting disk in sound power measurement}
+        \PubJournal{Appl. Acoust.}
+        140, 24--29 (2018).
+\end{itemize}
+
+
+\divider
+
+\printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Conference Proceedings}},type=inproceedings]
+
+
+
+\end{paracol}
+
+
+\end{document}

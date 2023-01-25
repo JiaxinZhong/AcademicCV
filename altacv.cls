@@ -254,7 +254,8 @@
     \altacv@left@photos\hfill%
     \begin{minipage}{\dimexpr\linewidth-\altacv@photos@width}%
     \raggedright%
-    {\namefont\color{name}\MakeUppercase{\@name}\par}
+    % {\namefont\color{name}\MakeUppercase{\@name}\par}
+    {\namefont\color{name}{\@name}\par}
     \medskip
     {\taglinefont\color{tagline}\@tagline\par}
     \medskip
@@ -280,6 +281,16 @@
 }
 
 % v1.1.4: fixes inconsistent font size
+% \newcommand{\cvevent}[4]{%
+  % {\large\color{emphasis}#1\par}
+  % \smallskip\normalsize
+  % \ifstrequal{#2}{}{}{
+  % \textbf{\color{accent}#2}\par
+  % \smallskip}
+  % \ifstrequal{#3}{}{}{{\small\makebox[0.5\linewidth][l]{\faCalendar~#3}}}%
+  % \ifstrequal{#4}{}{}{{\small\makebox[0.5\linewidth][l]{\faMapMarker~#4}}}\par
+  % \medskip\normalsize
+% }
 \newcommand{\cvevent}[4]{%
   {\large\color{emphasis}#1\par}
   \smallskip\normalsize
