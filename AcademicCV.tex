@@ -84,6 +84,16 @@
 % \newcommand
 \newcommand{\hrefhl}[2]{{\color{accent}\href{#1}{#2}}}
 
+
+
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\fancyhf{} % clear existing header/footer entries
+% Place Page X of Y on the right-hand
+% side of the footer
+\fancyfoot[C]{Page \thepage \hspace{1pt} of \pageref{LastPage}}
+
+
 \begin{document}
 \name{{Jiaxin (Jay) Zhong}}
 \tagline{Post-Doc in Acoustics at Penn State University}
@@ -103,6 +113,7 @@
   \linkedin{jiaxin-jay-zhong-502051240}
   \github{JiaxinZhong}
   \orcid{0000-0002-9972-8004}
+  \printinfo{\faCalendarCheck}{Last updated on 26-Jan-2023}
   %% You can add your own arbitrary detail with
   %% \printinfo{symbol}{detail}[optional hyperlink prefix]
   % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
@@ -128,10 +139,10 @@
 % \AtBeginEnvironment{itemize}{\small}
 
 %% Set the left/right column width ratio to 6:4.
-\columnratio{0.6}
+% \columnratio{0.6}
 % Start a 2-column paracol. Both the left and right columns will automatically
 % break across pages if things get too long.
-\begin{paracol}{1}
+% \begin{paracol}{1}
 
 \cvsection{Research Interests \hfill \faLightbulb}
 \cvtag{Active Acoustic Metamaterial}
@@ -503,7 +514,7 @@ Qiu.
 \end{itemize}
 
 
-\end{paracol}
+% \end{paracol}
 
 
 \end{document}
