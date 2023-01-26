@@ -88,20 +88,24 @@
 \usepackage{mfirstuc}
 \newcommand{\PubTitle}[1]{``{#1,}''}
 \newcommand{\PubCorAuthor}[1]{#1*}
+\newcommand{\PubMe}[1]{\textbf{#1}}
 
+% \newcommand
+\newcommand{\hrefhl}[2]{{\color{accent}\href{#1}{#2}}}
 
 \begin{document}
 \name{{Jiaxin (Jay) Zhong}}
 \tagline{Post-Doc in Acoustics at Penn State University}
 %% You can add multiple photos on the left or right
-\photoR{2.8cm}{Globe_High}
+% \photoR{2.8cm}{Globe_High}
+\photoR{2.8cm}{ProfilePicture}
 % \photoL{2.5cm}{Yacht_High,Suitcase_High}
 
 \personalinfo{%
   % Not all of these are required!
   \email{Jiaxin.Zhong@psu.edu}
   \phone{(+1)515-214-9386}
-  \mailaddress{201 Applied Sciences Building}
+  \mailaddress{Applied Sciences Building}
   \location{Graduate Program in Acoustics, The Pennsylvania State University, University Park, PA 16802}
   \homepage{JiaxinZhong.com}
   %\twitter{@twitterhandle}
@@ -136,151 +140,116 @@
 \columnratio{0.6}
 % Start a 2-column paracol. Both the left and right columns will automatically
 % break across pages if things get too long.
-\begin{paracol}{2}
-\cvsection{Employment}
+\begin{paracol}{1}
 
-\cvevent{Post-Doc}{Penn State University}{Dec 2022 -- Ongoing}{University Park}
-\begin{itemize}
-\item Job description 1
-\item Job description 2
-\end{itemize}
+\cvsection{Research Interets \hfill \faLightbulb}
+\cvtag{Active Metamaterial}
+\cvtag{Active Noise Control (ANC)}
+\cvtag{Audio Signal Processing}
+\cvtag{Computational Acoustics}
+\\
+\cvtag{Parametric Array Loudspeaker (PAL)}
 
-\cvsection{Projects}
+\cvsection{Employment \hfill \faBuilding}
 
-\cvevent{Project 1}{Funding agency/institution}{}{}
-\begin{itemize}
-\item Details
-\end{itemize}
-
-\divider
-
-\cvevent{Project 2}{Funding agency/institution}{Project duration}{}
-A short abstract would also work.
+\cvevent{Post-Doc}{\faUniversity Penn State University}{Dec-2022 -- Ongoing}{University Park}
+\faUserTie Advisor: \hrefhl{https://sites.psu.edu/jinglab/members/}{Dr.\ Yun Jing}
 
 \medskip
 
-\cvsection{A Day of My Life}
+\cvsection{Education \hfill \faUniversity}
 
-% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
-% \wheelchart{outer radius}{inner radius}{
-% comma-separated list of value/text width/color/detail}
-\wheelchart{1.5cm}{0.5cm}{%
-  6/8em/accent!30/{Sleep,\\beautiful sleep},
-  3/8em/accent!40/Hopeful novelist by night,
-  8/8em/accent!60/Daytime job,
-  2/10em/accent/Sports and relaxation,
-  5/6em/accent!20/Spending time with family
-}
+\cvevent{Ph.D.\ in Acoustics}{\faUniversity University of Technology Sydney}{Mar-2019 -- Aug-2022}{Sydney, Australia}
 
-\medskip
-\cvsection{Education}
+\faUserTie Advisors: Prof.\ Ray Kirby, Dr.\ Mahmoud Karimi, Prof.\ Xiaojun Qiu
 
-\cvevent{Ph.D.\ in Acoustics}{University of Technology Sydney}{Mar 2019 -- Aug 2022}{}
-Advisors: Prof. Ray Kirby, Dr. Mahmoud Karimi, Prof. Xiaojun Qiu
-
-Thesis title: Parametric array loudspeakers and applications in active noise control
+\faBook \textit{Parametric Array Loudspeakers and Applications in Active Noise Control}
 
 \divider
 
-\cvevent{M.Sc.\ in Acoustics}{Nanjing University}{Sept 2015 -- June 2018}{}
-Advisors: A/Prof. Jiancheng Tao, Prof. Xiaojun Qiu
+\cvevent{M.Sc.\ in Acoustics}{\faUniversity Nanjing University}{Sep-2015 -- Jun-2018}{Nanjing, China}
 
-Thesis: Effects of a finite size reflecting disk on sound power measurements
+\faUserTie Advisors: Dr.\ Jiancheng Tao, Prof.\ Xiaojun Qiu
 
-\divider
-
-\cvevent{B.Sc.\ in Acoustics}{Nanjing University}{Sept 2011 -- June 2015}{}
-Advisor: Prof. Xinlong Wang
-
-Thesis: The study of matching layers for ultrasonic transducers
-
-%% Switch to the right column. This will now automatically move to the second
-%% page if the content is too long.
-\switchcolumn
-
-\cvsection{My Life Philosophy}
-
-\begin{quote}
-``Something smart or heartfelt, preferably in one sentence.''
-\end{quote}
-
-\cvsection{Most Proud of}
-
-\cvachievement{\faTrophy}{Fantastic Achievement}{and some details about it}
+\faBook \textit{Effects of a Finite Size Reflecting Disk on Sound Power Measurements}
 
 \divider
 
-\cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
+\cvevent{B.Sc.\ in Acoustics}{\faUniversity Nanjing University}{Sep-2011 -- Jun-2015}{Nanjing, China}
 
-\divider
+\faUserTie Advisor: Prof. Xinlong Wang
 
-\cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
+\faBook \textit{The Study of Matching Layers for Ultrasonic Transducers}
 
-\cvsection{Strengths}
 
-\cvtag{Hard-working}
-\cvtag{Eye for detail}\\
-\cvtag{Motivator \& Leader}
-
-\divider\smallskip
-
-\cvtag{C++}
-\cvtag{Embedded Systems}\\
-\cvtag{Statistical Analysis}
-
-\cvsection{Languages}
-
-\cvskill{English}{5}
-\divider
-
-\cvskill{Spanish}{4}
-\divider
-
-\cvskill{German}{3.5} %% Supports X.5 values.
-
-%% Yeah I didn't spend too much time making all the
-%% spacing consistent... sorry. Use \smallskip, \medskip,
-%% \bigskip, \vspace etc to make adjustments.
 \medskip
 
 
 % \divider
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\cvsection{Referees}
+% \cvsection{Referees}
 
 % \cvref{name}{email}{mailing address}
-\cvref{Dr.\ Yun Jing}{Penn State University}{Jing.Yun@psu.edu}
-{Address Line 1\\Address line 2}
+% \cvref{Dr.\ Yun Jing}{Penn State University}{Jing.Yun@psu.edu}
+% {Address Line 1\\Address line 2}
 
-\divider
+% \divider
 
-\cvref{Prof.\ Ray Kirby}{University of Technology Sydney}{Ray.Kirby@uts.edu.au}
-{Address Line 1\\Address line 2}
+% \cvref{Prof.\ Ray Kirby}{University of Technology Sydney}{Ray.Kirby@uts.edu.au}
+% {Address Line 1\\Address line 2}
 
-\divider
+% \divider
 
-\cvref{Dr.\ Mahmoud Karimi}{University of Technology Sydney}{Mahmoud.Karimi@uts.edu.au}
-{Address Line 1\\Address line 2}
+% \cvref{Dr.\ Mahmoud Karimi}{University of Technology Sydney}{Mahmoud.Karimi@uts.edu.au}
+% {Address Line 1\\Address line 2}
 
-\divider
+% \divider
 
-\cvref{Prof.\ Xiaojun Qiu}{Nanjing University}{xjqiu@nju.edu.cn}
-{Address Line 1\\Address line 2}
+% \cvref{Prof.\ Xiaojun Qiu}{Nanjing University}{xjqiu@nju.edu.cn}
+% {Address Line 1\\Address line 2}
 
-\divider
+% \divider
 
-\cvref{Prof.\ Jing Lu}{Nanjing University}{lujing@nju.edu.cn}
-{Address Line 1\\Address line 2}
+% \cvref{Prof.\ Jing Lu}{Nanjing University}{lujing@nju.edu.cn}
+% {Address Line 1\\Address line 2}
 
-\end{paracol}
-
-\begin{paracol}{1}
 % use ONLY \newpage if you want to force a page break for
 % ONLY the current column
 % \newpage
 
-\cvsection{Publications}
+\cvsection{Honors \& Awards \hfill \faTrophy}
+
+{\color{accent}ICA-ASA Young Scientist Conference Attendance Grant} 
+\hfill \faCalendar* 24-Oct-2022
+\par
+International Commission for
+Acoustics (ICA) with Acoustical Society of America (ASA)
+
+\divider
+
+{\color{accent}Young Professional Grant}
+\hfill \faCalendar* 23-Aug-2020
+\par
+International Institute of Noise Control Engineering (I-INCE)
+
+\divider
+
+{\color{accent}Australian Research Council (ARC) Linkage Scholarship}
+\hfill \faCalendar* 12-Jun-2020
+\par
+University of Technology Sydney
+
+\divider
+
+{\color{accent}Tech Lab Staff and Student Committee HDR Collaboration Grant}
+\hfill \faCalendar* 18-Oct-2019
+\par
+University of Technology Sydney
+
+
+\newpage
+\cvsection{Publications \hfill \faPencil*}
 
 %% Specify your last name(s) and first name(s) as given in the .bib to automatically bold your own name in the publications list. 
 %% One caveat: You need to write \bibnamedelima where there's a space in your name for this to work properly; or write \bibnamedelimi if you use initials in the .bib
@@ -304,71 +273,72 @@ Underline: students under the supervision of Dr. Jiaxin Zhong.}
 
 \begin{itemize}[leftmargin = 25pt]
     \justifying 
-    \item[{[B1]}] \textbf{Jiaxin Zhong} and Xiaojun Qiu, 
+    \item[{[B1]}] \PubMe{Jiaxin Zhong} and Xiaojun Qiu, 
     ``Acoustic Waves Generated by Parametric Array Loudspeakers,'' 
     \textit{CRC Press}, In preparation (2023).
 \end{itemize}
 
 \divider
 
+
 % \printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}},type=article]
 \cvsubsection{\printinfo{\faFile}{Journal Articles}}
 
-\begin{itemize}[leftmargin = 25pt]
+\begin{itemize}[leftmargin = 30pt]
     % \setlength\itemsep{-.5em}
     \justifying 
     \item[{[J19]}]
-        \textbf{Jiaxin Zhong}, Haishan Zou, Jing Lu, and \PubCorAuthor{Dong Zhang},
+        \PubMe{Jiaxin Zhong}, Haishan Zou, Jing Lu, and \PubCorAuthor{Dong Zhang},
         \PubTitle{A modified convolution model for calculating the far field directivity of a parametric array loudspeaker}
         \PubJournal{J. Acoust. Soc. Am.}
         Under review (2022).
 
     \item[{[J18]}]
-        \textbf{Jiaxin Zhong}, \underline{Tao Zhuang}, Ray Kirby, Mahmoud Karimi, Jing Lu, and \PubCorAuthor{Dong Zhang},
+        \PubMe{Jiaxin Zhong}, \underline{Tao Zhuang}, Ray Kirby, Mahmoud Karimi, Jing Lu, and \PubCorAuthor{Dong Zhang},
         \PubTitle{Suppressing grating lobes for a steerable parametric array loudspeaker}
         \PubJournal{IEEE Trans. Audio Speech Lang. Process.}
         Under review (2022).
 
     \item[{[J17]}]
         \underline{Tao Zhuang}, 
-        \PubCorAuthor{\textbf{Jiaxin Zhong}},
+        \PubCorAuthor{\PubMe{Jiaxin Zhong}},
         Ray Kirby, Mahmoud Karimi, and Jing Lu, 
         \PubTitle{A steerable non-paraxial Gaussian beam expansion for a steerable parametric array loudspeaker}
         \PubJournal{J. Acoust. Soc. Am.}
         153(1), 124--136 (2023).
 
     \item[{[J16]}]
-        \textbf{Jiaxin Zhong}, \underline{Tao Zhuang}, Ray Kirby, Mahmoud Karimi, Xiaojun Qiu, \PubCorAuthor{Haishan Zou}, and Jing Lu,
+        \PubMe{Jiaxin Zhong}, \underline{Tao Zhuang}, Ray Kirby, Mahmoud Karimi, Xiaojun Qiu, \PubCorAuthor{Haishan Zou}, and Jing Lu,
         \PubTitle{Low frequency audio sound field generated by a focusing parametric array loudspeaker}
         \PubJournal{IEEE Trans. Audio Speech Lang. Process.}
         30, 3098--3109 (2022).
 
     \item[{[J15]}]
-        \textbf{Jiaxin Zhong}, Ray Kirby, Mahmoud Karimi, and \PubCorAuthor{Haishan Zou},
+        \PubMe{Jiaxin Zhong}, Ray Kirby, Mahmoud Karimi, and \PubCorAuthor{Haishan Zou},
         \PubTitle{A spherical wave expansion for a steerable parametric array loudspeaker using Zernike polynomials} 
         \PubJournal{J. Acoust. Soc. Am.} 
         152(4), 2296--2308 (2022).
 
     \item[{[J14]}]
-        \textbf{Jiaxin Zhong}, Ray Kirby, Mahmoud Karimi, \PubCorAuthor{Haishan Zou}, and Xiaojun Qiu,
+        \PubMe{Jiaxin Zhong}, Ray Kirby, Mahmoud Karimi, \PubCorAuthor{Haishan Zou}, and Xiaojun Qiu,
         \PubTitle{Scattering by a rigid sphere of audio sound generated by a parametric array loudspeaker} 
         \PubJournal{J. Acoust. Soc. Am.} 
         151(3), 1615--1626 (2022).
 
     \item[{[J13]}]
-        \textbf{Jiaxin Zhong}, \underline{Tao Zhuang}, Ray Kirby, Mahmoud Karimi, \PubCorAuthor{Haishan Zou}, and Xiaojun
+        \PubMe{Jiaxin Zhong}, \underline{Tao Zhuang}, Ray Kirby, Mahmoud Karimi, \PubCorAuthor{Haishan Zou}, and Xiaojun
 Qiu. 
         \PubTitle{Quiet zone generation in a free field with multiple parametric array loudspeakers} 
         \PubJournal{J. Acoust. Soc. Am.} 151(2), 1235--1245 (2022).
 
     \item[{[J12]}]
-        \textbf{Jiaxin Zhong}, Ray Kirby, Mahmoud Karimi, and \PubCorAuthor{Haishan Zou}, 
+        \PubMe{Jiaxin Zhong}, Ray Kirby, Mahmoud Karimi, and \PubCorAuthor{Haishan Zou}, 
         \PubTitle{A cylindrical expansion of the audio sound for a steerable parametric array loudspeaker}
         \PubJournal{J. Acoust. Soc. Am.}
         150(5), 3797--3806 (2021).
 
     \item[{[J11]}]
-        \PubCorAuthor{\textbf{Jiaxin Zhong}}, Ray Kirby, and Xiaojun Qiu,         
+        \PubCorAuthor{\PubMe{Jiaxin Zhong}}, Ray Kirby, and Xiaojun Qiu,         
         \PubTitle{The near field, Westervelt far field, and inverse-law far field of the audio sound generated by parametric array loudspeakers}
         \PubJournal{J. Acoust. Soc. Am.}
         149(3), 1524--1535 (2021).
@@ -431,8 +401,76 @@ Qiu.
 
 \divider
 
-\printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Conference Proceedings}},type=inproceedings]
+\cvsubsection{\printinfo{\faUsers}{Conference Papers}}
 
+\begin{itemize}[leftmargin = 25pt]
+    \item[{[C6]}] 
+        \PubMe{Jiaxin Zhong}, Ray Kirby, Mahmoud Karimi, Xiaojun Qiu, and Jing Lu,
+        \PubTitle{Audio sound field generated by a parametric array loudspeaker in a rectangular room with lightly damped walls}
+        \PubConference{The 24th International Congress on Acoustics (ICA)},
+        Gyeonju, Korea, October 24--28, 2022.
+    \item[{[C5]}] \PubMe{Jiaxin Zhong}, Tong Xiao, Benjamin Halkon, Ray Kirby, and Xiaojun Qiu,
+        \PubTitle{An experimental study on the active noise control using a parametric array loudspeaker}
+        \PubConference{Inter-Noise 2020},
+        Seoul, Korea,
+        August 23--26, 2020.
+
+    \item[{[C4]}] \PubMe{Jiaxin Zhong}, Jiancheng Tao, and Xiaojun Qiu,
+        \PubTitle{A numerical study on active noise radiation control systems between two parallel reflecting surfaces}
+        \PubConference{The 18th Asia-Pacific Vibration Coference},
+        Sydney, Australia, 
+        November 18--20, 2019.
+
+    \item[{[C3]}] Xiaojun Qiu, Qiaoxi Zhu, Shuping Wang, and \PubMe{Jiaxin Zhong},
+        \PubTitle{A case study on the new reverberation room built in University of Technology Sydney}
+        \PubConference{The 23rd International Congress on Acoustics (ICA)},
+        Aachen, Germany, 
+        September 9--13, 2019.
+
+    \item[{[C2]}] Jiancheng Tao, \PubMe{Jiaxin Zhong}, and Xiaojun Qiu,
+        \PubTitle{Progress of research on active noise radiation control with reflecting surfaces}
+        \PubConference{Inter-Noise 2019},
+        Madrid, Spain, 
+        June 16--19, 2019.
+
+    \item[{[C1]}] \PubMe{Jiaxin Zhong}, Jiancheng Tao, and Xiaojun Qiu,
+        \PubTitle{Effects of the finite circular baffle size on the sound power measurements}
+        \PubConference{Inter-Noise 2017},
+        Hong Kong, China, 
+        August 27--30, 2017.
+\end{itemize}
+
+\cvsection{Professional Activities \& Services \hfill \faUsers}
+
+
+\cvsubsection{\printinfo{\faIdCard}{Membership}}
+\begin{itemize}
+    \item Member, \hrefhl{https://www.ieee.org/membership/index.html}{Institute of Electrical and Electronics Engineers (IEEE)} \hfill \faCalendar*01-Mar-2022 -- Present
+
+    \item Young Professionals, \hrefhl{https://yp.ieee.org/}{IEEE} 
+        \hfill \faCalendar*01-Jan-2022 -- 31-Dec-2023
+
+    \item Member, \hrefhl{https://acousticalsociety.org/asa-membership/}{Acoustical Society of America (ASA)} 
+        \hfill \faCalendar* 1-Jan-2021 -- Present
+
+    \item Associate Member, \hrefhl{https://aes2.org/aes-membership-overview/}{Audio Engineering Society (AES)} 
+        \hfill \faCalendar* 
+        27-Jul-2021 -- Present
+\end{itemize}
+
+\cvsubsection{\printinfo{\faGlasses}{Reviewer}}
+\begin{itemize}
+    \item \hrefhl{https://www.journals.elsevier.com/applied-acoustics}{Applied Acoustics} \hfill \faCalendar* 2020 -- Present
+
+    \item \hrefhl{https://www.mdpi.com/journal/applsci}{Applied Sciences} \hfill \faCalendar* 2021 -- Present
+
+    \item Asia-Pacific Vibration Coference (APVC) \hfill \faCalendar* 2021
+
+    \item \hrefhl{https://asa.scitation.org/journal/jas}{The Journal of the Acoustical Society of America} \hfill \faCalendar* 2022 -- Present
+
+    \item \hrefhl{https://www.sciencedirect.com/journal/wave-motion}{Wave Motion} \hfill \faCalendar* 2021 -- Present
+
+\end{itemize}
 
 
 \end{paracol}

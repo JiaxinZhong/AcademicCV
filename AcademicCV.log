@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.3.20)  25 JAN 2023 18:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.3.20)  25 JAN 2023 23:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1077,34 +1077,34 @@ Package: mfirstuc 2021/10/15 v2.07 (NLCT)
 \@quotelevel=\count446
 \@quotereset=\count447
 LaTeX Font Info:    Trying to load font information for T1+lato-TLF on input li
-ne 93.
+ne 96.
 
 (d:/texlive/2021/texmf-dist/tex/latex/lato/T1lato-TLF.fd
 File: T1lato-TLF.fd 2019/06/24 Font definitions for T1/lato-TLF.
 )
 LaTeX Font Info:    Font shape `T1/lato-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 93.
+(Font)              scaled to size 10.0pt on input line 96.
  (./AcademicCV.aux)
 \openout1 = `AcademicCV.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
 
 (d:/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1128,7 +1128,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 93.
+Package hyperref Info: Link coloring OFF on input line 96.
 
 (d:/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -1141,9 +1141,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count454
 )
-LaTeX Info: Redefining \ref on input line 93.
-LaTeX Info: Redefining \pageref on input line 93.
-LaTeX Info: Redefining \nameref on input line 93.
+LaTeX Info: Redefining \ref on input line 96.
+LaTeX Info: Redefining \pageref on input line 96.
+LaTeX Info: Redefining \nameref on input line 96.
 
 (./AcademicCV.out) (./AcademicCV.out)
 \@outlinefile=\write6
@@ -1210,130 +1210,94 @@ File: TS1lato-TLF.fd 2019/06/24 Font definitions for TS1/lato-TLF.
 LaTeX Font Info:    Font shape `TS1/lato-TLF/m/n' will be
 (Font)              scaled to size 9.0pt on input line 26.
 )
-Package biblatex Info: Reference section=0 on input line 93.
-Package biblatex Info: Reference segment=0 on input line 93.
+Package biblatex Info: Reference section=0 on input line 96.
+Package biblatex Info: Reference segment=0 on input line 96.
 LaTeX Font Info:    Font shape `T1/lato-TLF/m/n' will be
-(Font)              scaled to size 24.88pt on input line 131.
+(Font)              scaled to size 24.88pt on input line 135.
 LaTeX Font Info:    Trying to load font information for T1+RobotoSlab-TLF on in
-put line 131.
+put line 135.
 
 (d:/texlive/2021/texmf-dist/tex/latex/roboto/T1RobotoSlab-TLF.fd
 File: T1RobotoSlab-TLF.fd 2019/12/11 (autoinst) Font definitions for T1/RobotoS
 lab-TLF.
 )
 LaTeX Font Info:    Font shape `T1/RobotoSlab-TLF/m/n' aliased to
-(Font)              `T1/RobotoSlab-TLF/regular/n' on input line 131.
+(Font)              `T1/RobotoSlab-TLF/regular/n' on input line 135.
 LaTeX Font Info:    Font shape `T1/RobotoSlab-TLF/b/n' aliased to
-(Font)              `T1/RobotoSlab-TLF/bold/n' on input line 131.
+(Font)              `T1/RobotoSlab-TLF/bold/n' on input line 135.
 LaTeX Font Info:    Font shape `T1/lato-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 131.
+(Font)              scaled to size 12.0pt on input line 135.
 LaTeX Font Info:    Font shape `T1/lato-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 131.
+(Font)              scaled to size 12.0pt on input line 135.
 LaTeX Font Info:    Font shape `T1/lato-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 131.
+(Font)              scaled to size 8.0pt on input line 135.
 LaTeX Font Info:    Trying to load font information for U+fontawesomefree0 on i
-nput line 131.
+nput line 135.
 
 (d:/texlive/2021/texmf-dist/tex/latex/fontawesome5/ufontawesomefree0.fd)
 LaTeX Font Info:    Trying to load font information for U+fontawesomefree2 on i
-nput line 131.
+nput line 135.
 
 (d:/texlive/2021/texmf-dist/tex/latex/fontawesome5/ufontawesomefree2.fd)
 LaTeX Font Info:    Trying to load font information for U+fontawesomefree1 on i
-nput line 131.
+nput line 135.
 
 (d:/texlive/2021/texmf-dist/tex/latex/fontawesome5/ufontawesomefree1.fd)
 LaTeX Font Info:    Trying to load font information for U+fontawesomebrands0 on
- input line 131.
+ input line 135.
 
 (d:/texlive/2021/texmf-dist/tex/latex/fontawesome5/ufontawesomebrands0.fd)
 LaTeX Font Info:    Font shape `U/fontawesomebrands0/solid/n' in size <8> not a
 vailable
 (Font)              Font shape `U/fontawesomebrands0/regular/n' tried instead o
-n input line 131.
+n input line 135.
 LaTeX Font Info:    Trying to load font information for U+fontawesomebrands1 on
- input line 131.
+ input line 135.
 
 (d:/texlive/2021/texmf-dist/tex/latex/fontawesome5/ufontawesomebrands1.fd)
 LaTeX Font Info:    Font shape `U/fontawesomebrands1/solid/n' in size <8> not a
 vailable
 (Font)              Font shape `U/fontawesomebrands1/regular/n' tried instead o
-n input line 131.
+n input line 135.
 
-Underfull \hbox (badness 10000) in paragraph at lines 131--131
+Underfull \hbox (badness 10000) in paragraph at lines 135--135
 [][][] [][][] [][][] 
  []
 
 
-Underfull \hbox (badness 7133) in paragraph at lines 131--131
+Underfull \hbox (badness 7133) in paragraph at lines 135--135
 [][][] 
  []
 
 <<ot1.cmap>><<oml.cmap>><<oms.cmap>>
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <7> on input line 131.
+(Font)              <7> on input line 135.
 <<omx.cmap>>
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <5> on input line 131.
-<Globe_High.png, id=20, 803.0pt x 803.0pt>
-File: Globe_High.png Graphic file (type png)
-<use Globe_High.png>
-Package pdftex.def Info: Globe_High.png  used on input line 131.
-(pdftex.def)             Requested size: 802.99805pt x 802.99805pt.
+(Font)              <5> on input line 135.
+<ProfilePicture.jpg, id=20, 167.87718pt x 148.30406pt>
+File: ProfilePicture.jpg Graphic file (type jpg)
+<use ProfilePicture.jpg>
+Package pdftex.def Info: ProfilePicture.jpg  used on input line 135.
+(pdftex.def)             Requested size: 167.87677pt x 148.30368pt.
 LaTeX Font Info:    Font shape `T1/lato-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 140.
+(Font)              scaled to size 17.28pt on input line 145.
 LaTeX Font Info:    Font shape `T1/RobotoSlab-TLF/m/n' aliased to
-(Font)              `T1/RobotoSlab-TLF/regular/n' on input line 140.
+(Font)              `T1/RobotoSlab-TLF/regular/n' on input line 145.
 LaTeX Font Info:    Font shape `T1/RobotoSlab-TLF/b/n' aliased to
-(Font)              `T1/RobotoSlab-TLF/bold/n' on input line 140.
+(Font)              `T1/RobotoSlab-TLF/bold/n' on input line 145.
 LaTeX Font Info:    Font shape `T1/lato-TLF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 142.
+(Font)              scaled to size 10.0pt on input line 155.
+LaTeX Font Info:    Trying to load font information for U+fontawesomefree3 on i
+nput line 155.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 173.
-
-
-Underfull \hbox (badness 2245) in paragraph at lines 173--173
- [][][][]\T1/lato-TLF/m/n/9 Sleep,
- []
-
-
-Overfull \hbox (25.22156pt too wide) in paragraph at lines 173--173
- [][] 
- []
-
-LaTeX Font Info:    Font shape `T1/lato-TLF/m/it' will be
-(Font)              scaled to size 10.0pt on input line 203.
-LaTeX Font Info:    Font shape `T1/lato-TLF/m/it' will be
-(Font)              scaled to size 12.0pt on input line 203.
 (d:/texlive/2021/texmf-dist/tex/latex/fontawesome5/ufontawesomefree3.fd)
-Overfull \hbox (1.59999pt too wide) in paragraph at lines 209--209
-[]|[]| 
- []
+LaTeX Font Info:    Font shape `T1/lato-TLF/m/it' will be
+(Font)              scaled to size 10.0pt on input line 166.
 
-
-Overfull \hbox (1.59999pt too wide) in paragraph at lines 213--213
-[]|[]| 
- []
-
-
-Overfull \hbox (1.59999pt too wide) in paragraph at lines 217--217
-[]|[]| 
- []
-
-LaTeX Font Info:    Font shape `T1/lato-TLF/b/n' will be
-(Font)              scaled to size 9.0pt on input line 253.
 [1
 
- <./Globe_High.png (PNG copy)>]
-
-Package biblatex Warning: Type 'inproceedings' not found on input line 434.
-
-
-LaTeX Warning: Empty bibliography on input line 434.
-
-[2] [3] (./AcademicCV.aux)
+ <./ProfilePicture.jpg>] [2] [3] (./AcademicCV.aux)
 Package rerunfilecheck Info: File `AcademicCV.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'AcademicCV.run.xml'.
@@ -1341,16 +1305,16 @@ Package logreq Info: Writing requests to 'AcademicCV.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40850 strings out of 478276
- 807059 string characters out of 5850489
- 1470954 words of memory out of 5000000
- 58384 multiletter control sequences out of 15000+600000
- 761257 words of font info for 71 fonts, out of 8000000 for 9000
+ 40410 strings out of 478276
+ 797395 string characters out of 5850489
+ 1462996 words of memory out of 5000000
+ 57947 multiletter control sequences out of 15000+600000
+ 695281 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 125i,10n,120p,1135b,3115s stack positions out of 5000i,500n,10000p,200000b,80000s
-{d:/texlive/2021/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free3.enc}{d:/tex
-live/2021/texmf-dist/fonts/enc/dvips/lato/a_cl4kdn.enc}{d:/texlive/2021/texmf-d
-ist/fonts/enc/dvips/lato/a_rt66h3.enc}{d:/texlive/2021/texmf-dist/fonts/enc/dvi
+ 125i,8n,120p,1135b,2465s stack positions out of 5000i,500n,10000p,200000b,80000s
+{d:/texlive/2021/texmf-dist/fonts/enc/dvips/lato/a_rt66h3.enc}{d:/texlive/202
+1/texmf-dist/fonts/enc/dvips/lato/a_cl4kdn.enc}{d:/texlive/2021/texmf-dist/font
+s/enc/dvips/fontawesome5/fa5free3.enc}{d:/texlive/2021/texmf-dist/fonts/enc/dvi
 ps/fontawesome5/fa5brands1.enc}{d:/texlive/2021/texmf-dist/fonts/enc/dvips/font
 awesome5/fa5brands0.enc}{d:/texlive/2021/texmf-dist/fonts/enc/dvips/fontawesome
 5/fa5free1.enc}{d:/texlive/2021/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free
@@ -1362,9 +1326,9 @@ awesome5/fa5brands0.enc}{d:/texlive/2021/texmf-dist/fonts/enc/dvips/fontawesome
 xlive/2021/texmf-dist/fonts/type1/typoland/lato/Lato-Italic.pfb><d:/texlive/202
 1/texmf-dist/fonts/type1/typoland/lato/Lato-Regular.pfb><d:/texlive/2021/texmf-
 dist/fonts/type1/google/roboto/RobotoSlab-Bold.pfb>
-Output written on AcademicCV.pdf (3 pages, 257312 bytes).
+Output written on AcademicCV.pdf (3 pages, 236643 bytes).
 PDF statistics:
- 91 PDF objects out of 1000 (max. 8388607)
+ 100 PDF objects out of 1000 (max. 8388607)
  4 named destinations out of 1000 (max. 500000)
  50 words of extra memory for PDF output out of 10000 (max. 10000000)
 

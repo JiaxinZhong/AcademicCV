@@ -294,11 +294,10 @@
 \newcommand{\cvevent}[4]{%
   {\large\color{emphasis}#1\par}
   \smallskip\normalsize
-  \ifstrequal{#2}{}{}{
-  \textbf{\color{accent}#2}\par
-  \smallskip}
-  \ifstrequal{#3}{}{}{{\small\makebox[0.5\linewidth][l]{\faCalendar~#3}}}%
-  \ifstrequal{#4}{}{}{{\small\makebox[0.5\linewidth][l]{\faMapMarker~#4}}}\par
+  % \ifstrequal{#2}{}{}{\textbf{\color{accent}#2}\smallskip\par}
+  \ifstrequal{#2}{}{}{\makebox[0.33\linewidth][l]{\textbf{\color{accent}#2}}}
+  \ifstrequal{#3}{}{}{{\small\makebox[0.33\linewidth][c]{\faCalendar*~#3}}}%
+  \ifstrequal{#4}{}{}{{\small\makebox[0.33\linewidth][r]{\faMapMarker~#4}}}\par
   \medskip\normalsize
 }
 

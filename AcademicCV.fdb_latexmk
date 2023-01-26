@@ -1,6 +1,6 @@
 # Fdb version 3
-["biber AcademicCV"] 1674688097 "AcademicCV.bcf" "AcademicCV.bbl" "AcademicCV" 1674688097
-  "AcademicCV.bcf" 1674688093 107230 73c607cef332b06ff32a0a13db736c4d "xelatex"
+["biber AcademicCV"] 1674688097 "AcademicCV.bcf" "AcademicCV.bbl" "AcademicCV" 1674702746
+  "AcademicCV.bcf" 1674688133 107230 73c607cef332b06ff32a0a13db736c4d "xelatex"
   "d:/texlive/2021/texmf-dist/bibtex/bib/gloss/sample.bib" 1647770126 2721 b88105703bd616b4f9867992219afb8a ""
   (generated)
   "AcademicCV.bbl"
@@ -9,13 +9,13 @@
   "AcademicCV.xdv" 0 -1 0 "xelatex"
   (generated)
   "AcademicCV.pdf"
-["xelatex"] 1674688103 "AcademicCV.tex" "AcademicCV.xdv" "AcademicCV" 1674688103
-  "AcademicCV.aux" 1674688093 778 961929ec9c7ab3231e0dbd1916294947 "xelatex"
+["xelatex"] 1674702746 "AcademicCV.tex" "AcademicCV.xdv" "AcademicCV" 1674702746
+  "AcademicCV.aux" 1674688133 815 5d86cad8b688d2db24f98ff69386552c "xelatex"
   "AcademicCV.bbl" 1674688103 2601 2c2f484d2358a18a1aea16240854711b "biber AcademicCV"
   "AcademicCV.out" 0 -1 0 "xelatex"
-  "AcademicCV.run.xml" 0 -1 0 "xelatex"
-  "AcademicCV.tex" 1674411119 16118 36c95014d32e59b962f6e6a9386b3d14 ""
-  "Globe_High.png" 1674406894 63755 e920f4c63dc7f188cc7e7db23dbf64dd ""
+  "AcademicCV.run.xml" 1674688133 2440 c76be9433cb5595471b8a0053d813758 "xelatex"
+  "AcademicCV.tex" 1674702742 16152 d339352f412fc7677dd11930d8b3bb7b ""
+  "PorfilePicture" 0 -1 0 ""
   "altacv.cls" 1674411229 15348 45a11a5e88ddb053d934aa5fbc9f8483 ""
   "creationdate.lua" 1674406911 149 8311341cdba4ea3af51d1c09381a0513 ""
   "d:/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1647769498 3524 cb3e574dea2d1052e39280babc910dc8 ""

@@ -1346,8 +1346,6 @@ INPUT ./AcademicCV.bbl
 INPUT ./AcademicCV.bbl
 INPUT AcademicCV.bbl
 INPUT d:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-INPUT ./Globe_High.png
-INPUT Globe_High.png
 OUTPUT AcademicCV.xdv
 INPUT AcademicCV.aux
 INPUT ./AcademicCV.out
