@@ -144,6 +144,8 @@ acs-*.bib
 
 # luatexja-ruby
 *.ltjruby
+*.lua
+*.timestamp
 
 # makeidx
 *.idx
