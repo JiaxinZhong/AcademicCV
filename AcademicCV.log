@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.2 (TeX Live 2021/W32TeX)  (format=lualatex 2022.3.20)  26 JAN 2023 01:34
+This is LuaHBTeX, Version 1.13.2 (TeX Live 2021/W32TeX)  (format=lualatex 2022.3.20)  26 JAN 2023 08:24
  restricted system commands enabled.
 **AcademicCV.tex
 (./AcademicCV.tex
@@ -1133,14 +1133,14 @@ Package rerunfilecheck Info: File `AcademicCV.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 35672 strings out of 477800
+ 35670 strings out of 477800
  195354,1144653 words of node,token memory allocated
  2396 words of node memory still in use:
    3 hlist, 1 vlist, 1 rule, 170 glue, 3 kern, 1 glyph, 173 attribute, 75 glue_s
 pec, 173 attribute_list, 2 write nodes
-   avail lists: 1:3,2:2627,3:992,4:415,5:1935,6:198,7:13247,8:87,9:987,10:6,11:8
-82
- 55085 multiletter control sequences out of 65536+600000
+   avail lists: 1:2,2:2641,3:992,4:416,5:1941,6:198,7:13249,8:87,9:999,10:6,11:8
+88
+ 55083 multiletter control sequences out of 65536+600000
  66 fonts using 9675411 bytes
  125i,8n,113p,531b,2026s stack positions out of 5000i,500n,10000p,200000b,80000s
 <d:/texlive/2021/texmf-dist/fonts/opentype/public/fontawesome5/FontAwesome5Free-
@@ -1152,7 +1152,7 @@ o/Lato-Regular.ttf><d:/texlive/2021/texmf-dist/fonts/opentype/public/fontawesome
 5/FontAwesome5Free-Solid-900.otf><d:/texlive/2021/texmf-dist/fonts/truetype/typo
 land/lato/Lato-Bold.ttf><d:/texlive/2021/texmf-dist/fonts/opentype/google/roboto
 /RobotoSlab-Bold.otf>
-Output written on AcademicCV.pdf (3 pages, 158759 bytes).
+Output written on AcademicCV.pdf (3 pages, 159191 bytes).
 
 PDF statistics: 141 PDF objects out of 1000 (max. 8388607)
  4 named destinations out of 1000 (max. 131072)
