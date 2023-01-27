@@ -22,7 +22,8 @@
 % \hypersetup{breaklinks = true}
 
 % Change the page layout if you need to
-\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm, 
+    footskip=1.5\baselineskip}
 
 % provides the environment outline
 % \usepackage{outlines}
@@ -88,11 +89,17 @@
 
 \usepackage{lastpage}
 \usepackage{fancyhdr}
-\fancyhf{} % clear existing header/footer entries
-% Place Page X of Y on the right-hand
-% side of the footer
-\fancyfoot[C]{Page \thepage \hspace{1pt} of \pageref{LastPage}}
+\fancyhf{} % clear Cxisting header/footer entries
+% % Place Page X of Y on the right-hand
+% % side of the footer
+\renewcommand{\headrule}{}
+\fancyfoot[C]{\small Page \thepage \hspace{1pt} of \pageref{LastPage}}
 
+% \usepackage{fancyhdr}
+% \fancyhf{}
+% \renewcommand{\headrule}{}
+% \fancyfoot[C]{\footnotesize whatever you need}
+\AtBeginDocument{\pagestyle{fancy}}
 
 \begin{document}
 \name{{Jiaxin (Jay) Zhong}}
@@ -101,6 +108,7 @@
 % \photoR{2.8cm}{Globe_High}
 \photoR{2.8cm}{ProfilePicture}
 % \photoL{2.5cm}{Yacht_High,Suitcase_High}
+
 
 \personalinfo{%
   % Not all of these are required!
@@ -113,7 +121,10 @@
   \linkedin{jiaxin-jay-zhong-502051240}
   \github{JiaxinZhong}
   \orcid{0000-0002-9972-8004}
-  \printinfo{\faCalendarCheck}{Last updated on 26-Jan-2023}
+  \printinfo{\faCalendarCheck}{Last updated on \today}
+  {{\color{accent}\href{https://www.overleaf.com/read/cxkgxwyzwjjd}{\aiOverleafSquare}}
+      {\color{accent}\href{https://github.com/JiaxinZhong/AcademicCV}{\faGithub}}
+       Source code of this CV}
   %% You can add your own arbitrary detail with
   %% \printinfo{symbol}{detail}[optional hyperlink prefix]
   % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
