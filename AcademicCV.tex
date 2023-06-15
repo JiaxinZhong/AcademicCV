@@ -62,6 +62,7 @@
 \colorlet{emphasis}{SlateGrey}
 \colorlet{body}{LightGrey}
 
+
 % Change some fonts, if necessary
 \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
 \renewcommand{\personalinfofont}{\footnotesize}
@@ -100,8 +101,13 @@
 % \fancyfoot[C]{\footnotesize whatever you need}
 \AtBeginDocument{\pagestyle{fancy}}
 
+\usepackage{ctex}
+\usepackage{setspace}
+\singlespacing
+\CTEXoptions[today=old]
+
 \begin{document}
-\name{{Jiaxin (Jay) Zhong }}
+\name{{Jiaxin ZHONG (钟家鑫)}}
 \tagline{Post-Doc in Acoustics at Penn State University (PSU)}
 %% You can add multiple photos on the left or right
 % \photoR{2.8cm}{Globe_High}
@@ -524,6 +530,18 @@ Wang, \PubMe{Jiaxin Zhong}, Jun Ji, Daniel Russell, Andrew Barnard,
         \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/conference/Tao2017-Internoise-AC_capacitor.pdf}{\color{accent}\faFilePdf[regular]}
 \end{itemize}
 
+\divider
+
+\cvsubsection{\printinfo{\faAward}{Issued Patents}}
+
+\begin{itemize}[leftmargin = 25pt]
+    \item[{[P1]}] \PubMe{Jiaxin Zhong}, Jiancheng Tao, and Xiaojun Qiu,
+        \PubTitle{A method for increasing the performance of active noise control systems with a partition (一种使用隔墙提高有源声辐射控制系统降噪量的方法)}
+        \PubConference{CN Patent ZL201811394850.9},
+        Filed Nov 22, 2018, and issued June 6, 2023.
+        \href{http://www.soopat.com/Patent/201811394850}{\color{accent}\faGlobe}
+\end{itemize}
+
 \cvsection{Professional Activities \& Services \hfill \faUsers}
 
 
@@ -571,7 +589,7 @@ Wang, \PubMe{Jiaxin Zhong}, Jun Ji, Daniel Russell, Andrew Barnard,
         Sound Field manipulation for Personal Audio, 
         \hrefhl{https://acoustics23sydney.org/}{185th Meeting of  
     Acoustical Society of America (Acoustics 2023)} \linebreak
-    \faChair Jiaxin Zhong and Sipei Zhao \href{https://scholar.google.com/citations?hl=en&user=WcFvtugAAAAJ}{\color{accent}\aiGoogleScholarSquare}\href{https://profiles.uts.edu.au/Sipei.Zhao}{\color{accent}\faGlobe}
+    \faChair \textbf{Jiaxin Zhong} and Sipei Zhao \href{https://scholar.google.com/citations?hl=en&user=WcFvtugAAAAJ}{\color{accent}\aiGoogleScholarSquare}\href{https://profiles.uts.edu.au/Sipei.Zhao}{\color{accent}\faGlobe}
     \hfill \faMapMarker Sydney, Australia  \faCalendar* 4--8 Dec 2023
 \end{itemize}
 
