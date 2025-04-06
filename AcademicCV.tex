@@ -95,7 +95,14 @@
 % % Place Page X of Y on the right-hand
 % % side of the footer
 \renewcommand{\headrule}{}
-\fancyfoot[C]{\small Page \thepage \hspace{1pt} of \pageref{LastPage}}
+\fancyfoot[R]{\small Page \thepage \hspace{1pt} of \pageref{LastPage}}
+\fancyfoot[L]{\small Last updated: \today}
+% set the format of date for \today 
+% https://tex.stackexchange.com/questions/152392/date-format-yyyy-mm-dd
+\usepackage[yyyymmdd]{datetime}
+\renewcommand{\dateseparator}{-}
+
+
 
 % \usepackage{fancyhdr}
 % \fancyhf{}
@@ -103,13 +110,20 @@
 % \fancyfoot[C]{\footnotesize whatever you need}
 \AtBeginDocument{\pagestyle{fancy}}
 
+% \renewcommand{\aiZenodo}{\raisebox{0.2ex}{\scalebox{1.3}{\aiZenodo}}}
+
 \usepackage{ctex}
 \usepackage{setspace}
 \singlespacing
 \CTEXoptions[today=old]
 
+% 放大一些 zenodo 的 logo
+\let\origaiZenodo\aiZenodo  % 保存原始定义（以防需要恢复）
+\renewcommand{\aiZenodo}{\raisebox{-0.73ex}{\scalebox{2}{\origaiZenodo}}}
+
+
 \begin{document}
-\name{{Jiaxin ZHONG (钟家鑫)}}
+\name{{Jia-Xin ZHONG (钟家鑫)}}
 \tagline{Post-Doc in Acoustics at Penn State University (PSU)}
 %% You can add multiple photos on the left or right
 % \photoR{2.8cm}{Globe_High}
@@ -118,39 +132,40 @@
 
 
 \personalinfo{%
-  % Not all of these are required!
-  \email{Jiaxin.Zhong@psu.edu}
-  \phone{(+1)515-214-9386}
-  \mailaddress{118 Research West}
-  \location{Graduate Program in Acoustics, The Pennsylvania State University, University Park, PA 16802}
-  \homepage{JiaxinZhong.com}
-  %\twitter{@twitterhandle}
-  \linkedin{jiaxin-jay-zhong-502051240}
-  \github{JiaxinZhong}
-  \orcid{0000-0002-9972-8004}
-  \printinfo{\faCalendarCheck}{Last updated on \today}
-  {{\color{accent}\aiGoogleScholarSquare}\ \ \href{https://scholar.google.com/citations?user=ZnN3mD0AAAAJ}{ZnN3mD0AAAAJ}}
-  {\hspace{2em}{\color{accent}\href{https://www.overleaf.com/read/cxkgxwyzwjjd}{\aiOverleafSquare}}
-      {\color{accent}\href{https://github.com/JiaxinZhong/AcademicCV}{\faGithub}}
-       Source code of this CV}
-  %% You can add your own arbitrary detail with
-  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
-  % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
-  %% Or you can declare your own field with
-  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
-  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
-  % \gitlab{your_id}
-  %%
-  %% For services and platforms like Mastodon where there isn't a
-  %% straightforward relation between the user ID/nickname and the hyperlink,
-  %% you can use \printinfo directly e.g.
-  % \printinfo{\faMastodon}{@username@instace}[https://instance.url/@username]
-  %% But if you absolutely want to create new dedicated info fields for
-  %% such platforms, then use \NewInfoField* with a star:
-  % \NewInfoField*{mastodon}{\faMastodon}
-  %% then you can use \mastodon, with TWO arguments where the 2nd argument is
-  %% the full hyperlink.
-  % \mastodon{@username@instance}{https://instance.url/@username}
+    % Not all of these are required!
+    \email{Jiaxin.Zhong@psu.edu}
+    \phone{(+1)814-699-0386}
+    \mailaddress{118 Research West}
+    \location{Graduate Program in Acoustics, The Pennsylvania State University, University Park, PA 16802}
+    \homepage{JiaxinZhong.com}
+    %\twitter{@twitterhandle}
+    \linkedin{jiaxin-jay-zhong-502051240}
+    \github{JiaxinZhong}
+    \orcid{0000-0002-9972-8004}
+    \printinfo{\faCalendarCheck}{Last updated on \today}
+    {{\color{accent}\aiGoogleScholarSquare}\ \ \href{https://scholar.google.com/citations?user=ZnN3mD0AAAAJ}{ZnN3mD0AAAAJ}}
+    {\hspace{2em}{\color{accent}\href{https://www.overleaf.com/read/cxkgxwyzwjjd}{\aiOverleafSquare}}
+        {\color{accent}\href{https://github.com/JiaxinZhong/AcademicCV}{\faGithub}}
+        Source code of this CV}
+
+    %% You can add your own arbitrary detail with
+    %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+    % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
+    %% Or you can declare your own field with
+    %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+    % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+    % \gitlab{your_id}
+    %%
+    %% For services and platforms like Mastodon where there isn't a
+    %% straightforward relation between the user ID/nickname and the hyperlink,
+    %% you can use \printinfo directly e.g.
+    % \printinfo{\faMastodon}{@username@instace}[https://instance.url/@username]
+    %% But if you absolutely want to create new dedicated info fields for
+    %% such platforms, then use \NewInfoField* with a star:
+    % \NewInfoField*{mastodon}{\faMastodon}
+    %% then you can use \mastodon, with TWO arguments where the 2nd argument is
+    %% the full hyperlink.
+    % \mastodon{@username@instance}{https://instance.url/@username}
 }
 
 \makecvheader
@@ -164,16 +179,19 @@
 % \begin{paracol}{1}
 
 \cvsection{Research Interests \hfill \faLightbulb}
-\cvtag{Active Acoustic Metamaterial}
-\cvtag{Active Noise Control}
-\cvtag{Audio Signal Processing}
-\cvtag{Computational Acoustics}
-\\
 \cvtag{Parametric Array Loudspeaker}
+% \cvtag{Active Acoustic Metamaterial}
+\cvtag{Audio Signal Processing}
+\cvtag{Active Noise Control}
+\cvtag{Sound Zone Control}
+% \cvtag{Computational Acoustics}
+% \\
+% \cvtag{Non-Hermitian Physics}
+% \cvtag{Topological Physics}
 
 \cvsection{Employment \hfill \faBuilding}
 
-\cvevent{\faUserTie Post-Doc}{\faUniversity Penn State University}{Dec-2022 -- Ongoing}{University Park, USA}
+\cvevent{\faUserTie Post-Doc}{\faUniversity Penn State University}{Dec-2022 -- Present}{University Park, USA}
 \faUserTie Advisor: Dr.\ Yun Jing \href{https://scholar.google.com/citations?hl=en&user=nkb3d8UAAAAJ}{\color{accent}\aiGoogleScholarSquare}\href{https://orcid.org/0000-0003-2960-5292}{\color{accent}\faOrcid}\hspace{-0.1cm}\href{https://www.linkedin.com/in/yun-jing-15605b15/}{\color{accent}\faLinkedin}\hspace{-0.1cm}\href{https://sites.psu.edu/jinglab/members/}{\color{accent}\faGlobe}
 
 \medskip
@@ -182,8 +200,8 @@
 
 \cvevent{\faUserGraduate Ph.D.\ in Acoustics}{\faUniversity University of Technology Sydney}{Mar-2019 -- Aug-2022}{Sydney, Australia}
 
-\faUserTie Advisors: Prof.\ Ray Kirby \href{https://scholar.google.com.au/citations?user=wNTEciAAAAAJ&hl=en}{\color{accent}\aiGoogleScholarSquare}\href{https://orcid.org/0000-0002-3520-1377}{\color{accent}\faOrcid}\hspace{-0.1cm}\href{https://www.linkedin.com/in/ray-kirby-423148262/}{\color{accent}\faLinkedin}, 
-Dr.\ Mahmoud Karimi \href{https://scholar.google.com/citations?user=uIwfBR8AAAAJ&hl=en}{\color{accent}\aiGoogleScholarSquare}\href{https://orcid.org/0000-0002-2949-5364}{\color{accent}\faOrcid}\hspace{-0.1cm}\href{https://www.linkedin.com/in/mahmoud-karimi-913b093a/}{\color{accent}\faLinkedin}, 
+\faUserTie Advisors: Prof.\ Ray Kirby \href{https://scholar.google.com.au/citations?user=wNTEciAAAAAJ&hl=en}{\color{accent}\aiGoogleScholarSquare}\href{https://orcid.org/0000-0002-3520-1377}{\color{accent}\faOrcid}\hspace{-0.1cm}\href{https://www.linkedin.com/in/ray-kirby-423148262/}{\color{accent}\faLinkedin},
+Dr.\ Mahmoud Karimi \href{https://scholar.google.com/citations?user=uIwfBR8AAAAJ&hl=en}{\color{accent}\aiGoogleScholarSquare}\href{https://orcid.org/0000-0002-2949-5364}{\color{accent}\faOrcid}\hspace{-0.1cm}\href{https://www.linkedin.com/in/mahmoud-karimi-913b093a/}{\color{accent}\faLinkedin},
 Prof.\ Xiaojun Qiu \href{https://scholar.google.com/citations?user=UdYuQmYAAAAJ&hl=en}{\color{accent}\aiGoogleScholarSquare}\href{https://orcid.org/0000-0002-5181-1220}{\color{accent}\faOrcid}
 
 \faBook \textit{Parametric Array Loudspeakers and Applications in Active Noise Control}
@@ -252,7 +270,7 @@ Acoustical Society of America (ASA)
 
 \divider
 
-{\color{accent}ICA-ASA Young Scientist Conference Attendance Grant} 
+{\color{accent}ICA-ASA Young Scientist Conference Attendance Grant}
 \hfill \faCalendar* 24-Oct-2022
 \par
 International Commission for
@@ -294,10 +312,11 @@ Underline names: students under the supervision of Dr.\ Jiaxin Zhong.
 \cvsubsection{\printinfo{\faBook}{Books}}
 
 \begin{itemize}[leftmargin = 25pt]
-    \justifying 
-    \item[{[B1]}] \PubMe{Jiaxin Zhong} and Xiaojun Qiu, 
-    ``Acoustic Waves Generated by Parametric Array Loudspeakers,'' 
-    \textit{Chemical Rubber Company (CRC) Press}, In press (2023).
+    \justifying
+    \item[{[B1]}] \PubMe{Jiaxin Zhong} and Xiaojun Qiu,
+    ``Acoustic Waves Generated by Parametric Array Loudspeakers,''
+    \textit{Chemical Rubber Company (CRC) Press} (2024).
+    \href{https://doi.org/10.1201/9781003354994}{\color{accent}\aiDoi}
 \end{itemize}
 
 \divider
@@ -308,182 +327,219 @@ Underline names: students under the supervision of Dr.\ Jiaxin Zhong.
 
 \begin{itemize}[leftmargin = 30pt]
     % \setlength\itemsep{-.5em}
-    \justifying 
+    \justifying
+
+    \item [{[J29]}]
+        \underline{Mengtong Li}, \underline{Tao Zhuang}, Kai Chen, \PubCorAuthor{\PubMe{Jia-Xin Zhong}}, and Jing Lu, 
+        \PubTitle{Deep learning-based approach for identification and compensation of nonlinear distortions in parametric array loudspeakers}
+        \PubJournal{IEEE Signal Process. Lett.} (2025).
+        \href{https://doi.org/10.1109/LSP.2025.3553434}{\color{accent}\aiDoi}
+        \href{https://doi.org/10.5281/zenodo.15107800}{\color{accent}\aiZenodo}
+
+    \item[{[J28]}]
+    \PubMe{Jia-Xin Zhong}$^\dag$, Jun Ji$^\dag$, Xiaoxing Xia, Hyeonu Heo, and \PubCorAuthor{Yun Jing},
+    \PubTitle{Audible enclaves crafted by nonlinear self-bending ultrasonic beams}
+    \PubJournal{Proc. Natl. Acad. Sci.} 122(12), e2408975122 (2025).
+    \href{https://doi.org/10.1073/pnas.2408975122}{\color{accent}\aiDoi}
+    \href{https://doi.org/10.5281/zenodo.14873417}{\color{accent}\aiZenodo}
+
+    \item[{[J27]}]
+        \underline{Tao Zhuang}, \PubCorAuthor{\PubMe{Jia-Xin Zhong}}, Guilin Ma, Feng  Niu, and Jing Lu,
+    \PubTitle{Modeling a phased array of parametric array loudspeakers using the spherical wave expansion}
+    \PubJournal{IEEE Trans. Audio Speech Lang. Process.} 33, 309--318 (2025).
+    \href{https://doi.org/10.1109/TASLPRO.2024.3522764}{\color{accent}\aiDoi}
+    \item[{[J26]}]
+        \PubMe{Jia-Xin Zhong}$^\dag$, Pedro Fittipaldi De Castro$^\dag$, Tianhong Lu, Jeewoo Kim, Mourad Oudich, Jun Ji, Shi Li, Kai Chen, \PubCorAuthor{Jing Lu}, \PubCorAuthor{Yun Jing}, and \PubCorAuthor{Wladimir A. Benalcazar},
+        \PubTitle{Higher-order skin effect and its observation in an acoustic kagome lattice}
+        \PubJournal{Phys. Rev. B} 111(1), 014314 (2025).
+        \href{https://link.aps.org/doi/10.1103/PhysRevB.111.014314}{\color{accent}\aiDoi}
+    \item[{[J25]}]
+        \underline{Shao-Zhe Li}, \underline{Tao Zhuang}, \PubCorAuthor{\PubMe{Jia-Xin Zhong}}, and Jing Lu,
+    \PubTitle{Extended King integral for modeling of parametric array loudspeakers with
+    axisymmetric profiles}
+    \PubJournal{J. Acoust. Soc. Am.} 156(4), 2189--2199 (2024).
+    \href{https://doi.org/10.1121/10.0030403}{\color{accent}\aiDoi}
 
     \item[{[J24]}]
-        \underline{Tao Zhuang}, \PubCorAuthor{\PubMe{Jiaxin Zhong}}, Guilin Ma, Feng Niu, and Jing Lu,
-        \PubTitle{Modeling a phased array of parametric array loudspeaker using the spherical wave expansion}
-        Under review (2023).
+    Chadi Ellouzi, Ali Zabihi, Farhood Aghdasi, Aidan Kayes, Milton Rivera, \PubMe{Jiaxin Zhong}, Amir Miri, and \PubCorAuthor{Chen Shen},
+    \PubTitle{Underwater double vortex generation using 3D printed acoustic lens and field multiplexing}
+    \PubJournal{APL Mater.} 12, 031130 (2024).
+    \href{https://doi.org/10.1063/5.0201781}{\color{accent}\aiDoi}
 
     \item[{[J23]}]
-        \underline{Mengtong Li}, \PubCorAuthor{\PubMe{Jiaxin Zhong}}, Yun Jing, and Jing Lu,
-        \PubTitle{A note on the audio sound power generated by a parametric array loudspeaker}
-        Under review (2023).
+    Jun Ji$^\dag$, Hyeonu Heo$^\dag$, \PubMe{Jiaxin Zhong}$^\dag$, \PubCorAuthor{Mourad Oudich}, and \PubCorAuthor{Yun Jing},
+    \PubTitle{Metamaterial-enabled wireless and contactless ultrasonic power transfer and data transmission through a metallic wall}
+    \PubJournal{Phys. Rev. Appl.} 21, 014059 (2024).
+    \href{https://doi.org/10.1103/PhysRevApplied.21.014059}{\color{accent}\aiDoi}
 
     \item[{[J22]}]
-        Jun Ji$^\dag$, Hyeonu Heo$^\dag$, \PubMe{Jiaxin Zhong}$^\dag$, \PubCorAuthor{Mourad Oudich}, and \PubCorAuthor{Yun Jing},
-        \PubTitle{Metamaterial-enabled wireless and contactless ultrasonic power transfer and data transmission through a metallic wall}
-        Under review (2023).
+    \underline{Mengtong Li}, \PubCorAuthor{\PubMe{Jiaxin Zhong}}, Yun Jing, and Jing Lu,
+    \PubTitle{A note on the audio sound power generated by a parametric array loudspeaker}
+    \PubJournal{J. Acoust. Soc. Am.} 154(6), 3899-3905 (2023).
+    \href{https://doi.org/10.1121/10.0023955}{\color{accent}\aiDoi}
 
     \item[{[J21]}]
-        \PubMe{Jiaxin Zhong}$^\dag$, Chengbo Hu$^\dag$, Kangkang Wang, Jun Ji, Tao Zhuang, Haishan Zou, Jing Lu, Hyeonu Heo, \PubCorAuthor{Bin Liang}, \PubCorAuthor{Yun Jing}, and \PubCorAuthor{Jian-Chun Cheng},
-        \PubTitle{Local-nonlinearity-enabled deep sub-diffraction control of acoustic waves}
-        Under review (2023).
+    \PubMe{Jiaxin Zhong}$^\dag$, Chengbo Hu$^\dag$, Kangkang Wang, Jun Ji, Tao Zhuang, Haishan Zou, Jing Lu, Hyeonu Heo, \PubCorAuthor{Bin Liang}, \PubCorAuthor{Yun Jing}, and \PubCorAuthor{Jian-Chun Cheng},
+    \PubTitle{Local-nonlinearity-enabled deep sub-diffraction control of acoustic waves}
+    \PubJournal{Phys. Rev. Lett.} 131(23), 234001 (2023).
+    \href{https://doi.org/10.1103/PhysRevLett.131.234001}{\color{accent}\aiDoi}
 
     \item[{[J20]}]
-        \PubMe{Jiaxin Zhong}$^\dag$, \underline{Tao Zhuang}$^\dag$, Mentong Li, Ray Kirby, Mahmoud Karimi, Jing Lu, and \PubCorAuthor{Dong Zhang},
-        \PubTitle{Sidelobe Suppression for a Steerable Parametric Source Using the Sparse Random Array Technique}
-        \PubJournal{IEEE/ACM Trans. Audio Speech Lang. Process.}
-        31, 3152--3161 (2023).
+    \PubMe{Jiaxin Zhong}$^\dag$, \underline{Tao Zhuang}$^\dag$, Mentong Li, Ray Kirby, Mahmoud Karimi, Jing Lu, and \PubCorAuthor{Dong Zhang},
+    \PubTitle{Sidelobe suppression for a steerable parametric source using the sparse random array technique}
+    \PubJournal{IEEE/ACM Trans. Audio Speech Lang. Process.}
+    31, 3152--3161 (2023).
+    \href{10.1109/TASLP.2023.3304491}{\color{accent}\aiDoi}
 
     \item[{[J19]}]
-        \PubMe{Jiaxin Zhong}, Haishan Zou, and \PubCorAuthor{Jing Lu},
-        \PubTitle{A modal expansion method for simulating reverberant sound fields generated by a directional source in a rectangular enclosure}
-        \PubJournal{J. Acoust. Soc. Am.} 
-        154(1), 203--216 (2023).
-        \href{https://doi.org/10.1121/10.0020070}{\color{accent}\aiDoi}
-        \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Zhong2023-JASA-EnclosureDirectionalSource.pdf}{\color{accent}\faFilePdf[regular]}
-        
+    \PubMe{Jiaxin Zhong}, Haishan Zou, and \PubCorAuthor{Jing Lu},
+    \PubTitle{A modal expansion method for simulating reverberant sound fields generated by a directional source in a rectangular enclosure}
+    \PubJournal{J. Acoust. Soc. Am.}
+    154(1), 203--216 (2023).
+    \href{https://doi.org/10.1121/10.0020070}{\color{accent}\aiDoi}
+    \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Zhong2023-JASA-EnclosureDirectionalSource.pdf}{\color{accent}\faFilePdf[regular]}
+
     \item[{[J18]}]
-        \PubMe{Jiaxin Zhong}, Haishan Zou, Jing Lu, and \PubCorAuthor{Dong Zhang},
-        \PubTitle{A modified convolution model for calculating the far field directivity of a parametric array loudspeaker}
-        \PubJournal{J. Acoust. Soc. Am.}
-        153(3), 1439--1451 (2023).
-        \href{https://doi.org/10.1121/10.0017361}{\color{accent}\aiDoi}
-        \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Zhong2023-JASA-PAL_CDM.pdf}{\color{accent}\faFilePdf[regular]}
+    \PubMe{Jiaxin Zhong}, Haishan Zou, Jing Lu, and \PubCorAuthor{Dong Zhang},
+    \PubTitle{A modified convolution model for calculating the far field directivity of a parametric array loudspeaker}
+    \PubJournal{J. Acoust. Soc. Am.}
+    153(3), 1439--1451 (2023).
+    \href{https://doi.org/10.1121/10.0017361}{\color{accent}\aiDoi}
+    \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Zhong2023-JASA-PAL_CDM.pdf}{\color{accent}\faFilePdf[regular]}
 
 
     \item[{[J17]}]
-        \underline{Tao Zhuang}, 
-        \PubCorAuthor{\PubMe{Jiaxin Zhong}},
-        Ray Kirby, Mahmoud Karimi, and Jing Lu, 
-        \PubTitle{A steerable non-paraxial Gaussian beam expansion for a steerable parametric array loudspeaker}
-        \PubJournal{J. Acoust. Soc. Am.}
-        153(1), 124--136 (2023).
-        \href{https://doi.org/10.1121/10.0016816}{\color{accent}\aiDoi}
-        \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Zhuang2023-JASA-PAL_steerable_GBE.pdf}{\color{accent}\faFilePdf[regular]}
+    \underline{Tao Zhuang},
+    \PubCorAuthor{\PubMe{Jiaxin Zhong}},
+    Ray Kirby, Mahmoud Karimi, and Jing Lu,
+    \PubTitle{A steerable non-paraxial Gaussian beam expansion for a steerable parametric array loudspeaker}
+    \PubJournal{J. Acoust. Soc. Am.}
+    153(1), 124--136 (2023).
+    \href{https://doi.org/10.1121/10.0016816}{\color{accent}\aiDoi}
+    \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Zhuang2023-JASA-PAL_steerable_GBE.pdf}{\color{accent}\faFilePdf[regular]}
 
     \item[{[J16]}]
-        \PubMe{Jiaxin Zhong}, \underline{Tao Zhuang}, Ray Kirby, Mahmoud Karimi, Xiaojun Qiu, \PubCorAuthor{Haishan Zou}, and Jing Lu,
-        \PubTitle{Low frequency audio sound field generated by a focusing parametric array loudspeaker}
-        \PubJournal{IEEE/ACM Trans. Audio Speech Lang. Process.}
-        30, 3098--3109 (2022).
-        \href{https://doi.org/10.1109/TASLP.2022.3209944}{\color{accent}\aiDoi}
-        \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Zhong2022-IEEETASLP-Focusing_PAL.pdf}{\color{accent}\faFilePdf[regular]}
+    \PubMe{Jiaxin Zhong}, \underline{Tao Zhuang}, Ray Kirby, Mahmoud Karimi, Xiaojun Qiu, \PubCorAuthor{Haishan Zou}, and Jing Lu,
+    \PubTitle{Low frequency audio sound field generated by a focusing parametric array loudspeaker}
+    \PubJournal{IEEE/ACM Trans. Audio Speech Lang. Process.}
+    30, 3098--3109 (2022).
+    \href{https://doi.org/10.1109/TASLP.2022.3209944}{\color{accent}\aiDoi}
+    \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Zhong2022-IEEETASLP-Focusing_PAL.pdf}{\color{accent}\faFilePdf[regular]}
 
     \item[{[J15]}]
-        \PubMe{Jiaxin Zhong}, Ray Kirby, Mahmoud Karimi, and \PubCorAuthor{Haishan Zou},
-        \PubTitle{A spherical wave expansion for a steerable parametric array loudspeaker using Zernike polynomials} 
-        \PubJournal{J. Acoust. Soc. Am.} 
-        152(4), 2296--2308 (2022).
-        \href{https://doi.org/10.1121/10.0014832}{\color{accent}\aiDoi}
-        \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Zhong2022-JASA-PAL_Zernike.pdf}{\color{accent}\faFilePdf[regular]}
+    \PubMe{Jiaxin Zhong}, Ray Kirby, Mahmoud Karimi, and \PubCorAuthor{Haishan Zou},
+    \PubTitle{A spherical wave expansion for a steerable parametric array loudspeaker using Zernike polynomials}
+    \PubJournal{J. Acoust. Soc. Am.}
+    152(4), 2296--2308 (2022).
+    \href{https://doi.org/10.1121/10.0014832}{\color{accent}\aiDoi}
+    \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Zhong2022-JASA-PAL_Zernike.pdf}{\color{accent}\faFilePdf[regular]}
 
     \item[{[J14]}]
-        \PubMe{Jiaxin Zhong}, Ray Kirby, Mahmoud Karimi, \PubCorAuthor{Haishan Zou}, and Xiaojun Qiu,
-        \PubTitle{Scattering by a rigid sphere of audio sound generated by a parametric array loudspeaker} 
-        \PubJournal{J. Acoust. Soc. Am.} 
-        151(3), 1615--1626 (2022).
-        \href{https://doi.org/10.1121/10.0009750}{\color{accent}\aiDoi}
-        \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Zhong2022-JASA-PAL_sphere.pdf}{\color{accent}\faFilePdf[regular]}
+    \PubMe{Jiaxin Zhong}, Ray Kirby, Mahmoud Karimi, \PubCorAuthor{Haishan Zou}, and Xiaojun Qiu,
+    \PubTitle{Scattering by a rigid sphere of audio sound generated by a parametric array loudspeaker}
+    \PubJournal{J. Acoust. Soc. Am.}
+    151(3), 1615--1626 (2022).
+    \href{https://doi.org/10.1121/10.0009750}{\color{accent}\aiDoi}
+    \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Zhong2022-JASA-PAL_sphere.pdf}{\color{accent}\faFilePdf[regular]}
 
     \item[{[J13]}]
-        \PubMe{Jiaxin Zhong}, \underline{Tao Zhuang}, Ray Kirby, Mahmoud Karimi, \PubCorAuthor{Haishan Zou}, and Xiaojun
-Qiu. 
-        \PubTitle{Quiet zone generation in a free field with multiple parametric array loudspeakers} 
-        \PubJournal{J. Acoust. Soc. Am.} 151(2), 1235--1245 (2022).
-        \href{https://doi.org/10.1121/10.0009587}{\color{accent}\aiDoi}
-        \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Zhong2022-JASA-PAL_ANC.pdf}{\color{accent}\faFilePdf[regular]}
+    \PubMe{Jiaxin Zhong}, \underline{Tao Zhuang}, Ray Kirby, Mahmoud Karimi, \PubCorAuthor{Haishan Zou}, and Xiaojun
+    Qiu.
+    \PubTitle{Quiet zone generation in a free field with multiple parametric array loudspeakers}
+    \PubJournal{J. Acoust. Soc. Am.} 151(2), 1235--1245 (2022).
+    \href{https://doi.org/10.1121/10.0009587}{\color{accent}\aiDoi}
+    \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Zhong2022-JASA-PAL_ANC.pdf}{\color{accent}\faFilePdf[regular]}
 
     \item[{[J12]}]
-        \PubMe{Jiaxin Zhong}, Ray Kirby, Mahmoud Karimi, and \PubCorAuthor{Haishan Zou}, 
-        \PubTitle{A cylindrical expansion of the audio sound for a steerable parametric array loudspeaker}
-        \PubJournal{J. Acoust. Soc. Am.}
-        150(5), 3797--3806 (2021).
-        \href{https://doi.org/10.1121/10.0007280}{\color{accent}\aiDoi}
-        \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Zhong2021-JASA-PAL_cylindrical_expansion.pdf}{\color{accent}\faFilePdf[regular]}
+    \PubMe{Jiaxin Zhong}, Ray Kirby, Mahmoud Karimi, and \PubCorAuthor{Haishan Zou},
+    \PubTitle{A cylindrical expansion of the audio sound for a steerable parametric array loudspeaker}
+    \PubJournal{J. Acoust. Soc. Am.}
+    150(5), 3797--3806 (2021).
+    \href{https://doi.org/10.1121/10.0007280}{\color{accent}\aiDoi}
+    \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Zhong2021-JASA-PAL_cylindrical_expansion.pdf}{\color{accent}\faFilePdf[regular]}
 
     \item[{[J11]}]
-        \PubCorAuthor{\PubMe{Jiaxin Zhong}}, Ray Kirby, and Xiaojun Qiu,         
-        \PubTitle{The near field, Westervelt far field, and inverse-law far field of the audio sound generated by parametric array loudspeakers}
-        \PubJournal{J. Acoust. Soc. Am.}
-        149(3), 1524--1535 (2021).
-        \href{https://doi.org/10.1121/10.0003606}{\color{accent}\aiDoi}
-        \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Zhong2021-JASA-PAL_sound_field.pdf}{\color{accent}\faFilePdf[regular]}
+    \PubCorAuthor{\PubMe{Jiaxin Zhong}}, Ray Kirby, and Xiaojun Qiu,
+    \PubTitle{The near field, Westervelt far field, and inverse-law far field of the audio sound generated by parametric array loudspeakers}
+    \PubJournal{J. Acoust. Soc. Am.}
+    149(3), 1524--1535 (2021).
+    \href{https://doi.org/10.1121/10.0003606}{\color{accent}\aiDoi}
+    \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Zhong2021-JASA-PAL_sound_field.pdf}{\color{accent}\faFilePdf[regular]}
+    \textbf{Highlighted in Front Cover!}
 
     \item[{[J10]}]
-        \PubCorAuthor{\PubMe{Jiaxin Zhong}} and Xiaojun Qiu,
-        \PubTitle{On the spherical expansion for calculating the sound radiated by a baffled circular piston} 
-        \PubJournal{J. Theor. Comput. Acoust.}
-        2050026 (2020).
-        \href{https://doi.org/10.1142/S2591728520500267}{\color{accent}\aiDoi}
-        \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Zhong2020-JTCA-Piston_radiation.pdf}{\color{accent}\faFilePdf[regular]}
+    \PubCorAuthor{\PubMe{Jiaxin Zhong}} and Xiaojun Qiu,
+    \PubTitle{On the spherical expansion for calculating the sound radiated by a baffled circular piston}
+    \PubJournal{J. Theor. Comput. Acoust.}
+    2050026 (2020).
+    \href{https://doi.org/10.1142/S2591728520500267}{\color{accent}\aiDoi}
+    \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Zhong2020-JTCA-Piston_radiation.pdf}{\color{accent}\faFilePdf[regular]}
 
     \item[{[J9]}]
-        \PubCorAuthor{\textbf{Jiaxin Zhong}}, Shuping Wang, Ray Kirby, and Xiaojun Qiu, 
-        \PubTitle{Reflection of audio sounds generated by a parametric array loudspeaker} 
-        \PubJournal{J. Acoust. Soc. Am.}
-        148(4), 2327--2336 (2020).
-        \href{https://doi.org/10.1121/10.0002161}{\color{accent}\aiDoi}
-        \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Zhong2020-JASA-PAL_reflection.pdf}{\color{accent}\faFilePdf[regular]}
+    \PubCorAuthor{\textbf{Jiaxin Zhong}}, Shuping Wang, Ray Kirby, and Xiaojun Qiu,
+    \PubTitle{Reflection of audio sounds generated by a parametric array loudspeaker}
+    \PubJournal{J. Acoust. Soc. Am.}
+    148(4), 2327--2336 (2020).
+    \href{https://doi.org/10.1121/10.0002161}{\color{accent}\aiDoi}
+    \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Zhong2020-JASA-PAL_reflection.pdf}{\color{accent}\faFilePdf[regular]}
 
     \item[{[J8]}]
-        \PubCorAuthor{\textbf{Jiaxin Zhong}}, Shuping Wang, Ray Kirby, and Xiaojun Qiu, 
-        \PubTitle{Insertion loss of a thin partition for audio sounds generated by a parametric array loudspeaker}
-        \PubJournal{J. Acoust. Soc. Am.}
-        148(1), 226--235 (2020).
-        \href{https://doi.org/10.1121/10.0001568}{\color{accent}\aiDoi}
-        \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Zhong2020-JASA-PAL_insertion_loss.pdf}{\color{accent}\faFilePdf[regular]}
+    \PubCorAuthor{\textbf{Jiaxin Zhong}}, Shuping Wang, Ray Kirby, and Xiaojun Qiu,
+    \PubTitle{Insertion loss of a thin partition for audio sounds generated by a parametric array loudspeaker}
+    \PubJournal{J. Acoust. Soc. Am.}
+    148(1), 226--235 (2020).
+    \href{https://doi.org/10.1121/10.0001568}{\color{accent}\aiDoi}
+    \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Zhong2020-JASA-PAL_insertion_loss.pdf}{\color{accent}\faFilePdf[regular]}
 
     \item[{[J7]}]
-        \PubCorAuthor{\textbf{Jiaxin Zhong}}, Ray Kirby, and Xiaojun Qiu, 
-        \PubTitle{A spherical expansion for audio sounds generated by a circular parametric array loudspeaker}
-        \PubJournal{J. Acoust. Soc. Am.}
-        147(5), 3502--3510 (2020).
-        \href{https://doi.org/10.1121/10.0001261}{\color{accent}\aiDoi}
-        \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Zhong2020-JASA-PAL_SWE.pdf}{\color{accent}\faFilePdf[regular]}
+    \PubCorAuthor{\textbf{Jiaxin Zhong}}, Ray Kirby, and Xiaojun Qiu,
+    \PubTitle{A spherical expansion for audio sounds generated by a circular parametric array loudspeaker}
+    \PubJournal{J. Acoust. Soc. Am.}
+    147(5), 3502--3510 (2020).
+    \href{https://doi.org/10.1121/10.0001261}{\color{accent}\aiDoi}
+    \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Zhong2020-JASA-PAL_SWE.pdf}{\color{accent}\faFilePdf[regular]}
 
     \item[{[J6]}] \textbf{Jiaxin Zhong}, Baicun Chen, \PubCorAuthor{Jiancheng Tao}, and Xiaojun Qiu,
-        \PubTitle{The performance of active noise control systems on ground with two parallel reflecting surfaces}
-        \PubJournal{J. Acoust. Soc. Am.}
-        147(5), 3397--3407 (2020).
-        \href{https://doi.org/10.1121/10.0001227}{\color{accent}\aiDoi}
-        \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Zhong2020-JASA-ANC_parallel_surface.pdf}{\color{accent}\faFilePdf[regular]}
+    \PubTitle{The performance of active noise control systems on ground with two parallel reflecting surfaces}
+    \PubJournal{J. Acoust. Soc. Am.}
+    147(5), 3397--3407 (2020).
+    \href{https://doi.org/10.1121/10.0001227}{\color{accent}\aiDoi}
+    \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Zhong2020-JASA-ANC_parallel_surface.pdf}{\color{accent}\faFilePdf[regular]}
 
-    \item[{[J5]}] \PubCorAuthor{Shuping Wang}, \textbf{Jiaxin Zhong}, Xiaojun Qiu, and Ian Burnett, 
-        \PubTitle{A note on using panel diffusers to improve sound field diffusivity in reverberation rooms below 100 Hz}
-    \PubJournal{Appl. Acoust.} 
+    \item[{[J5]}] \PubCorAuthor{Shuping Wang}, \textbf{Jiaxin Zhong}, Xiaojun Qiu, and Ian Burnett,
+    \PubTitle{A note on using panel diffusers to improve sound field diffusivity in reverberation rooms below 100 Hz}
+    \PubJournal{Appl. Acoust.}
     169, 107471 (2020).
-        \href{https://doi.org/10.1016/j.apacoust.2020.107471}{\color{accent}\aiDoi}
-        \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Wang2020-AA-Diffuser.pdf}{\color{accent}\faFilePdf[regular]}
+    \href{https://doi.org/10.1016/j.apacoust.2020.107471}{\color{accent}\aiDoi}
+    \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Wang2020-AA-Diffuser.pdf}{\color{accent}\faFilePdf[regular]}
 
     \item[{[J4]}] \PubCorAuthor{\textbf{Jiaxin Zhong}}, Ray Kirby, and Xiaojun Qiu,
-        \PubTitle{A non-paraxial model for the audio sound behind a non-baffled parametric array loudspeaker}
-        \PubJournal{J. Acoust. Soc. Am.}
-        147(3), 1577-1580 (2020).
-        \href{https://doi.org/10.1121/10.0000793}{\color{accent}\aiDoi}
-        \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Zhong2020-JASA-PAL_disk.pdf}{\color{accent}\faFilePdf[regular]}
+    \PubTitle{A non-paraxial model for the audio sound behind a non-baffled parametric array loudspeaker}
+    \PubJournal{J. Acoust. Soc. Am.}
+    147(3), 1577-1580 (2020).
+    \href{https://doi.org/10.1121/10.0000793}{\color{accent}\aiDoi}
+    \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Zhong2020-JASA-PAL_disk.pdf}{\color{accent}\faFilePdf[regular]}
 
-    \item[{[J3]}] \textbf{Jiaxin Zhong}, \PubCorAuthor{Jiancheng Tao}, and Xiaojun Qiu, 
-        \PubTitle{Increasing the performance of active noise control systems on ground with two vertical reflecting surfaces with an included angle} 
-        \PubJournal{J. Acoust. Soc. Am.}
-        146(6), 4075--4085 (2019).
-        \href{https://doi.org/10.1121/1.5134062}{\color{accent}\aiDoi}
-        \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Zhong2019-JASA-ANC_surface_included_angle.pdf}{\color{accent}\faFilePdf[regular]}
+    \item[{[J3]}] \textbf{Jiaxin Zhong}, \PubCorAuthor{Jiancheng Tao}, and Xiaojun Qiu,
+    \PubTitle{Increasing the performance of active noise control systems on ground with two vertical reflecting surfaces with an included angle}
+    \PubJournal{J. Acoust. Soc. Am.}
+    146(6), 4075--4085 (2019).
+    \href{https://doi.org/10.1121/1.5134062}{\color{accent}\aiDoi}
+    \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Zhong2019-JASA-ANC_surface_included_angle.pdf}{\color{accent}\faFilePdf[regular]}
 
     \item[{[J2]}] \textbf{Jiaxin Zhong}, \PubCorAuthor{Jiancheng Tao}, and Xiaojun Qiu,
-        \PubTitle{Increasing the performance of active noise control systems on ground with a finite size vertical reflecting surface}
-        \PubJournal{Appl. Acoust.} 
-        154, 193--200 (2019).
-        \href{https://doi.org/10.1016/j.apacoust.2019.05.002}{\color{accent}\aiDoi}
-        \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Zhong2019-AA-ANC_finite_size_surface.pdf}{\color{accent}\faFilePdf[regular]}
+    \PubTitle{Increasing the performance of active noise control systems on ground with a finite size vertical reflecting surface}
+    \PubJournal{Appl. Acoust.}
+    154, 193--200 (2019).
+    \href{https://doi.org/10.1016/j.apacoust.2019.05.002}{\color{accent}\aiDoi}
+    \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Zhong2019-AA-ANC_finite_size_surface.pdf}{\color{accent}\faFilePdf[regular]}
 
     \item[{[J1]}] \textbf{Jiaxin Zhong}, \PubCorAuthor{Jiancheng Tao}, Feng Niu, and Xiaojun Qiu,
-        \PubTitle{Effects of a finite size reflecting disk in sound power measurement}
-        \PubJournal{Appl. Acoust.}
-        140, 24--29 (2018).
-        \href{https://doi.org/10.1016/j.apacoust.2018.05.007}{\color{accent}\aiDoi}
-        \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Zhong2018-AA-Sound_power.pdf}{\color{accent}\faFilePdf[regular]}
+    \PubTitle{Effects of a finite size reflecting disk in sound power measurement}
+    \PubJournal{Appl. Acoust.}
+    140, 24--29 (2018).
+    \href{https://doi.org/10.1016/j.apacoust.2018.05.007}{\color{accent}\aiDoi}
+    \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/journal/Zhong2018-AA-Sound_power.pdf}{\color{accent}\faFilePdf[regular]}
 \end{itemize}
 
 
@@ -493,82 +549,77 @@ Qiu.
 \cvsubsection{\printinfo{\faUsers}{Conference Papers}}
 
 \begin{itemize}[leftmargin = 30pt]
-    \item [{[C12]}]
-        \ul{Tao Zhuang}, \PubCorAuthor{\PubMe{Jiaxin Zhong}}, Jing Lu, Feng Niu, and Longbiao He,
-        \PubTitle{Performance of a steerable focusing parametric array loudspeaker}
-        \PubConference{2024 IEEE International Conference on Acoustics, Speech and Signal Processing},
-        Coex, Seoul, Korea, Apr 14--19, 2024.
     \item [{[C11]}]
-        \ul{Mengtong Li}, \PubCorAuthor{\PubMe{Jiaxin Zhong}}, Haishan Zou, and Jing Lu,
-        \PubTitle{System identification of a parametric array loudspeaker using variational recurrent neural network}
-        \PubConference{2024 IEEE International Conference on Acoustics, Speech and Signal Processing},
-        Coex, Seoul, Korea, Apr 14--19, 2024.
+          \underline{Tao Zhuang}, \PubMe{Jia-Xin Zhong}, and Jing Lu,
+          \PubTitle{The feasibility of sound zone control using an array of parametric array loudspeakers}
+          \PubConference{International Ultrasonic2024 IEEE 14th International Symposium on Chinese Spoken Language Processing (ISCSLP)},
+          Beijing, China, Nov 7--10, 2024.
     \item [{[C10]}]
-        Jun Ji, Hyeonu Heo, \PubMe{Jiaxin Zhong}, Mourad Oudich, and Yun Jing, 
-        \PubTitle{Through-metal-Wall power delivery using an ultrasonic pillar-Based metamaterial}
-        \PubConference{International Ultrasonics Symposium},
-        Montreal, Quebec, Canada, Sept 3--8, 2023.
+          Jun Ji, Hyeonu Heo, \PubMe{Jiaxin Zhong}, Mourad Oudich, and Yun Jing,
+          \PubTitle{Through-metal-Wall power delivery using an ultrasonic pillar-Based metamaterial}
+          \PubConference{International Ultrasonics Symposium},
+          Montreal, Quebec, Canada, Sept 3--8, 2023.
     \item [{[C9]}]
-        John Arthur Case, Carter Paprocki, Hannah Kurdila, Trent Furlong, Eric Rokni, Yu-Tong Wang, \PubMe{Jiaxin Zhong}, Jun Ji, Daniel Russell, and Andrew Barnard,
-        \PubTitle{Sound power characterization of Corsi-Rosenthal boxes using DIY comparison method}
-        \PubConference{NOISE-CON 2023},
-        Grand Rapids, MI, USA, May 15--18, 2023.
-        \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/conference/Case2023-NoiseCon2023.pdf}{\color{accent}\faFilePdf[regular]}
+          John Arthur Case, Carter Paprocki, Hannah Kurdila, Trent Furlong, Eric Rokni, Yu-Tong Wang, \PubMe{Jiaxin Zhong}, Jun Ji, Daniel Russell, and Andrew Barnard,
+          \PubTitle{Sound power characterization of Corsi-Rosenthal boxes using DIY comparison method}
+          \PubConference{NOISE-CON 2023},
+          Grand Rapids, MI, USA, May 15--18, 2023.
+          \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/conference/Case2023-NoiseCon2023.pdf}{\color{accent}\faFilePdf[regular]}
     \item [{[C8]}]
-        \PubMe{Jiaxin Zhong} and Yun Jing,
-        \PubTitle{Fast and accurate modeling of parametric array loudspeakers in the frequency domain}
-        \PubConference{Acoustical Society of America 184th Meeting},
-        Chicago, Illinois, USA, May 8--12, 2023.
-        \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/conference/Zhong2023_ASA184Chicago.pdf}{\color{accent}\faFilePowerpoint[regular]}
-    \item[{[C7]}] 
-        \PubMe{Jiaxin Zhong}, Ray Kirby, Mahmoud Karimi, Xiaojun Qiu, and Jing Lu,
-        \PubTitle{Audio sound field generated by a parametric array loudspeaker in a rectangular room with lightly damped walls}
-        \PubConference{The 24th International Congress on Acoustics (ICA)},
-        Gyeonju, Korea, October 24--28, 2022. 
-        \textbf{Invited}.
-        \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/conference/Zhong2022-ICA-PAL_room.pdf}{\color{accent}\faFilePdf[regular]}
+          \PubMe{Jiaxin Zhong} and Yun Jing,
+          \PubTitle{Fast and accurate modeling of parametric array loudspeakers in the frequency domain}
+          \PubConference{Acoustical Society of America 184th Meeting},
+          Chicago, Illinois, USA, May 8--12, 2023.
+          \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/conference/Zhong2023_ASA184Chicago.pdf}{\color{accent}\faFilePowerpoint[regular]}
+          \item[{[C7]}]
+          \PubMe{Jiaxin Zhong}, Ray Kirby, Mahmoud Karimi, Xiaojun Qiu, and Jing Lu,
+          \PubTitle{Audio sound field generated by a parametric array loudspeaker in a rectangular room with lightly damped walls}
+          \PubConference{The 24th International Congress on Acoustics (ICA)},
+          Gyeonju, Korea, October 24--28, 2022.
+          \textbf{Invited}.
+          \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/conference/Zhong2022-ICA-PAL_room.pdf}{\color{accent}\faFilePdf[regular]}
 
-    \item[{[C6]}] \PubMe{Jiaxin Zhong}, Tong Xiao, Benjamin Halkon, Ray Kirby, and Xiaojun Qiu,
-        \PubTitle{An experimental study on the active noise control using a parametric array loudspeaker}
-        \PubConference{Inter-Noise 2020},
-        Seoul, Korea,
-        August 23--26, 2020.
-        \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/conference/Zhong2020-Internoise-PAL_ANC.pdf}{\color{accent}\faFilePdf[regular]}
+          \item[{[C6]}] \PubMe{Jiaxin Zhong}, Tong Xiao, Benjamin Halkon, Ray Kirby, and Xiaojun Qiu,
+          \PubTitle{An experimental study on the active noise control using a parametric array loudspeaker}
+          \PubConference{Inter-Noise 2020},
+          Seoul, Korea,
+          August 23--26, 2020.
+          \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/conference/Zhong2020-Internoise-PAL_ANC.pdf}{\color{accent}\faFilePdf[regular]}
 
-    \item[{[C5]}] \PubMe{Jiaxin Zhong}, Jiancheng Tao, and Xiaojun Qiu,
-        \PubTitle{A numerical study on active noise radiation control systems between two parallel reflecting surfaces}
-        \PubConference{The 18th Asia-Pacific Vibration Coference},
-        Sydney, Australia, 
-        Nov 18--20, 2019.
-        \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/conference/Zhong2019-APVC-ANC_parallel_surface.pdf}{\color{accent}\faFilePdf[regular]}
+          \item[{[C5]}] \PubMe{Jiaxin Zhong}, Jiancheng Tao, and Xiaojun Qiu,
+          \PubTitle{A numerical study on active noise radiation control systems between two parallel reflecting surfaces}
+          \PubConference{The 18th Asia-Pacific Vibration Coference},
+          Sydney, Australia,
+          Nov 18--20, 2019.
+          \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/conference/Zhong2019-APVC-ANC_parallel_surface.pdf}{\color{accent}\faFilePdf[regular]}
 
-    \item[{[C4]}] Xiaojun Qiu, Qiaoxi Zhu, Shuping Wang, and \PubMe{Jiaxin Zhong},
-        \PubTitle{A case study on the new reverberation room built in University of Technology Sydney}
-        \PubConference{The 23rd International Congress on Acoustics (ICA)},
-        Aachen, Germany, 
-        September 9--13, 2019.
-        \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/conference/Qiu2019-ICA-Reverberation_room_UTS.pdf}{\color{accent}\faFilePdf[regular]}
+          \item[{[C4]}] Xiaojun Qiu, Qiaoxi Zhu, Shuping Wang, and \PubMe{Jiaxin Zhong},
+          \PubTitle{A case study on the new reverberation room built in University of Technology Sydney}
+          \PubConference{The 23rd International Congress on Acoustics (ICA)},
+          Aachen, Germany,
+          September 9--13, 2019.
+          \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/conference/Qiu2019-ICA-Reverberation_room_UTS.pdf}{\color{accent}\faFilePdf[regular]}
 
-    \item[{[C3]}] Jiancheng Tao, \PubMe{Jiaxin Zhong}, and Xiaojun Qiu,
-        \PubTitle{Progress of research on active noise radiation control with reflecting surfaces}
-        \PubConference{Inter-Noise 2019},
-        Madrid, Spain, 
-        June 16--19, 2019.
-        \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/conference/Tao2019-Internoise-ANC_surface.pdf}{\color{accent}\faFilePdf[regular]}
+          \item[{[C3]}] Jiancheng Tao, \PubMe{Jiaxin Zhong}, and Xiaojun Qiu,
+          \PubTitle{Progress of research on active noise radiation control with reflecting surfaces}
+          \PubConference{Inter-Noise 2019},
+          Madrid, Spain,
+          June 16--19, 2019.
+          \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/conference/Tao2019-Internoise-ANC_surface.pdf}{\color{accent}\faFilePdf[regular]}
 
-    \item[{[C2]}] \PubMe{Jiaxin Zhong}, Jiancheng Tao, and Xiaojun Qiu,
-        \PubTitle{Effects of the finite circular baffle size on the sound power measurements}
-        \PubConference{Inter-Noise 2017},
-        Hong Kong, China, 
-        August 27--30, 2017.
-        \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/conference/Zhong2017-InterNoise-Sound_power_measurement.pdf}{\color{accent}\faFilePdf[regular]}
-    
-    \item[{[C1]}] Jiancheng Tao, \PubMe{Jiaxin Zhong}, and Xiaojun Qiu,
-        \PubTitle{Noise radiation from an AC filter capacitor}
-        \PubConference{Inter-Noise 2017},
-        Hong Kong, China, 
-        August 27--30, 2017.
-        \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/conference/Tao2017-Internoise-AC_capacitor.pdf}{\color{accent}\faFilePdf[regular]}
+          \item[{[C2]}] \PubMe{Jiaxin Zhong}, Jiancheng Tao, and Xiaojun Qiu,
+          \PubTitle{Effects of the finite circular baffle size on the sound power measurements}
+          \PubConference{Inter-Noise 2017},
+          Hong Kong, China,
+          August 27--30, 2017.
+          \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/conference/Zhong2017-InterNoise-Sound_power_measurement.pdf}{\color{accent}\faFilePdf[regular]}
+
+          \item[{[C1]}] Jiancheng Tao, \PubMe{Jiaxin Zhong}, and Xiaojun Qiu,
+          \PubTitle{Noise radiation from an AC filter capacitor}
+          \PubConference{Inter-Noise 2017},
+          Hong Kong, China,
+          August 27--30, 2017.
+          \href{https://github.com/JiaxinZhong/JiaxinZhong.github.io/raw/master/publications/conference/Tao2017-Internoise-AC_capacitor.pdf}{\color{accent}\faFilePdf[regular]}
 \end{itemize}
 
 \divider
@@ -576,11 +627,16 @@ Qiu.
 \cvsubsection{\printinfo{\faAward}{Issued Patents}}
 
 \begin{itemize}[leftmargin = 25pt]
+    \item[{[P2]}] \PubMe{Jiaxin Zhong}, Jiancheng Tao, and Xiaojun Qiu,
+    \PubTitle{A method for increasing the performance of active noise control systems with two partitions (一种使用两面隔墙提高有源降噪系统性能的方法)}
+    \PubConference{CN Patent ZL201910270294.2},
+    Filed April 3, 2019, and issued Nov 3, 2023.
+    % \href{http://www.soopat.com/Patent/201811394850}{\color{accent}\faGlobe}
     \item[{[P1]}] \PubMe{Jiaxin Zhong}, Jiancheng Tao, and Xiaojun Qiu,
-        \PubTitle{A method for increasing the performance of active noise control systems with a partition (一种使用隔墙提高有源声辐射控制系统降噪量的方法)}
-        \PubConference{CN Patent ZL201811394850.9},
-        Filed Nov 22, 2018, and issued June 6, 2023.
-        \href{http://www.soopat.com/Patent/201811394850}{\color{accent}\faGlobe}
+    \PubTitle{A method for increasing the performance of active noise control systems with a partition (一种使用隔墙提高有源声辐射控制系统降噪量的方法)}
+    \PubConference{CN Patent ZL201811394850.9},
+    Filed Nov 22, 2018, and issued June 6, 2023.
+    % \href{http://www.soopat.com/Patent/201811394850}{\color{accent}\faGlobe}
 \end{itemize}
 
 \cvsection{Professional Activities \& Services \hfill \faUsers}
@@ -590,35 +646,38 @@ Qiu.
 \begin{itemize}
     \item Member, \hrefhl{https://www.ieee.org/membership/index.html}{Institute of Electrical and Electronics Engineers (IEEE)} \hfill \faCalendar*1 Mar 2022 -- Present
 
-    \item Young Professionals, \hrefhl{https://yp.ieee.org/}{IEEE} 
-        \hfill \faCalendar*1 Jan 2022 -- 31 Dec 2023
+    \item Young Professionals, \hrefhl{https://yp.ieee.org/}{IEEE}
+          \hfill \faCalendar*1 Jan 2022 -- 31 Dec 2023
 
-    \item Student Member, \hrefhl{https://acousticalsociety.org/asa-membership/}{Acoustical Society of America (ASA)} 
-        \hfill \faCalendar* 1 Jan 2021 -- 11 May 2023
+    \item Student Member, \hrefhl{https://acousticalsociety.org/asa-membership/}{Acoustical Society of America (ASA)}
+          \hfill \faCalendar* 1 Jan 2021 -- 11 May 2023
 
-    \item Member, \hrefhl{https://acousticalsociety.org/asa-membership/}{Acoustical Society of America (ASA)} 
-        \hfill \faCalendar* 11 May 2023 -- Present
+    \item Member, \hrefhl{https://acousticalsociety.org/asa-membership/}{Acoustical Society of America (ASA)}
+          \hfill \faCalendar* 11 May 2023 -- Present
 
-    \item Associate Member, \hrefhl{https://aes2.org/aes-membership-overview/}{Audio Engineering Society (AES)} 
-        \hfill \faCalendar* 
-        27 Jul 2021 -- 6 June 2023
+    \item Associate Member, \hrefhl{https://aes2.org/aes-membership-overview/}{Audio Engineering Society (AES)}
+          \hfill \faCalendar*
+          27 Jul 2021 -- 6 June 2023
 
-    \item Member, \hrefhl{https://aes2.org/aes-membership-overview/}{Audio Engineering Society (AES)} 
-        \hfill \faCalendar* 
-        6 June 2023 -- Present
+    \item Member, \hrefhl{https://aes2.org/aes-membership-overview/}{Audio Engineering Society (AES)}
+          \hfill \faCalendar*
+          6 June 2023 -- Present
 \end{itemize}
 
 \cvsubsection{\printinfo{\faGlasses}{Reviewer}}
 \begin{itemize}
+    \item \hrefhl{https://link.springer.com/journal/40857}{Acoustics Australia} \hfill \faCalendar* 2023 -- Present
+
     \item \hrefhl{https://www.journals.elsevier.com/applied-acoustics}{Applied Acoustics} \hfill \faCalendar* 2020 -- Present
 
     \item \hrefhl{https://www.mdpi.com/journal/applsci}{Applied Sciences} \hfill \faCalendar* 2021 -- Present
 
-
     \item \hrefhl{https://www.aes.org/journal/}{Journal of the Audio Engineering Society} \hfill \faCalendar* 2023 -- Present
 
-    \item \hrefhl{https://www.amazon.com/Vibration-Engineering-Sustainable-Future-Passive/dp/3030476170}{The 18th Asia-Pacific Vibration Coference (APVC)} \hfill \faCalendar* 2019 
+    \item \hrefhl{https://www.amazon.com/Vibration-Engineering-Sustainable-Future-Passive/dp/3030476170}{The 18th Asia-Pacific Vibration Coference (APVC)} \hfill \faCalendar* 2019
     \item \hrefhl{https://asa.scitation.org/journal/jas}{The Journal of the Acoustical Society of America} \hfill \faCalendar* 2022 -- Present
+
+    \item \hrefhl{https://journals.aps.org/prl/}{Physical Review Letter} \hfill \faCalendar* 2024 -- Present
 
     \item \hrefhl{https://www.sciencedirect.com/journal/wave-motion}{Wave Motion} \hfill \faCalendar* 2021 -- Present
 
@@ -626,12 +685,12 @@ Qiu.
 
 \cvsubsection{\printinfo{\faChalkboardTeacher}{Session Chair}}
 \begin{itemize}
-    \item 
-        Sound Field Manipulation for Personal Audio, 
-        \hrefhl{https://acoustics23sydney.org/}{185th Meeting of  
-    Acoustical Society of America (Acoustics 2023)} \linebreak
-    \faChair \textbf{Jiaxin Zhong} and Sipei Zhao \href{https://scholar.google.com/citations?hl=en&user=WcFvtugAAAAJ}{\color{accent}\aiGoogleScholarSquare}\href{https://profiles.uts.edu.au/Sipei.Zhao}{\color{accent}\faGlobe}
-    \hfill \faMapMarker Sydney, Australia  \faCalendar* 4--8 Dec 2023
+    \item
+          Sound Field Manipulation for Personal Audio,
+          \hrefhl{https://acoustics23sydney.org/}{185th Meeting of
+              Acoustical Society of America (Acoustics 2023)} \linebreak
+          \faChair \textbf{Jiaxin Zhong} and Sipei Zhao \href{https://scholar.google.com/citations?hl=en&user=WcFvtugAAAAJ}{\color{accent}\aiGoogleScholarSquare}\href{https://profiles.uts.edu.au/Sipei.Zhao}{\color{accent}\faGlobe}
+          \hfill \faMapMarker Sydney, Australia  \faCalendar* 4--8 Dec 2023
 \end{itemize}
 
 % \end{paracol}
